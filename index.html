@@ -3,258 +3,267 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mathématiques Maroc Bac & BTS | Cours, Exercices, Astuces</title>
+    <title>Bac Maths Maroc | Cours, BTS & Réussite</title>
+    <meta name="description" content="Plateforme gratuite de mathématiques pour le Bac Maroc et BTS. Cours, exercices corrigés et soutien scolaire personnalisé.">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome pour les icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        :root {
+            --primary: #0b3b5f;
+            --secondary: #e67e22;
+            --accent: #1b5a7a;
+            --light: #f4f7fc;
+            --dark: #1e2a3e;
+            --white: #ffffff;
         }
+
+        html { scroll-behavior: smooth; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
         body {
-            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
-            background: #f8fafc;
-            color: #0f172a;
-            line-height: 1.5;
+            font-family: 'Poppins', sans-serif;
+            background: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
         }
+
+        /* --- Header & Hero --- */
         header {
-            background: linear-gradient(135deg, #0f2b3d, #1e4a6e);
-            color: white;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: var(--white);
             text-align: center;
-            padding: 2rem 1rem;
-            border-bottom-left-radius: 2rem;
-            border-bottom-right-radius: 2rem;
-            margin-bottom: 2rem;
+            padding: 4rem 1rem;
+            border-bottom-left-radius: 3rem;
+            border-bottom-right-radius: 3rem;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
         }
-        header h1 {
-            font-size: 2.2rem;
-            margin-bottom: 0.5rem;
+
+        header h1 { font-size: 2.8rem; margin-bottom: 1rem; letter-spacing: -1px; }
+        header p { font-size: 1.2rem; opacity: 0.9; max-width: 700px; margin: 0 auto; }
+
+        .cta { margin-top: 2rem; }
+        .cta a {
+            background: var(--secondary);
+            color: white;
+            padding: 15px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(230, 126, 34, 0.4);
         }
-        header p {
-            font-size: 1.1rem;
-            opacity: 0.9;
+
+        .cta a:hover {
+            background: #d35400;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(230, 126, 34, 0.6);
         }
+
+        /* --- Navigation --- */
         nav {
-            background: white;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 0.5rem;
-            padding: 0.8rem;
+            background: var(--white);
+            padding: 1rem;
             position: sticky;
             top: 0;
-            z-index: 100;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            z-index: 1000;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
         }
+
         nav a {
-            background: #eef2ff;
-            padding: 0.5rem 1.2rem;
-            border-radius: 2rem;
+            margin: 0 15px;
             text-decoration: none;
-            color: #1e4a6e;
+            color: var(--primary);
             font-weight: 600;
-            transition: 0.2s;
+            font-size: 0.95rem;
+            transition: color 0.3s;
         }
-        nav a:hover {
-            background: #1e4a6e;
-            color: white;
-        }
-        main {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 1rem;
-        }
+
+        nav a:hover { color: var(--secondary); }
+
+        /* --- Sections --- */
+        main { max-width: 1100px; margin: 3rem auto; padding: 0 20px; }
+
         section {
-            background: white;
-            border-radius: 1.5rem;
-            padding: 1.5rem;
-            margin-bottom: 2rem;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            background: var(--white);
+            margin-bottom: 3rem;
+            padding: 2.5rem;
+            border-radius: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+            border: 1px solid rgba(0,0,0,0.02);
         }
+
         h2 {
-            font-size: 1.8rem;
-            border-left: 5px solid #e67e22;
-            padding-left: 1rem;
-            margin-bottom: 1.2rem;
-            color: #0f2b3d;
+            color: var(--primary);
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
-        h3 {
-            font-size: 1.3rem;
-            margin: 1rem 0 0.5rem;
-            color: #1e4a6e;
-        }
-        .bts-grid {
+
+        h2 i { color: var(--secondary); font-size: 1.5rem; }
+
+        /* --- Grid System --- */
+        .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 1.2rem;
-            margin-top: 1rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
         }
-        .bts-card {
-            background: #f1f5f9;
-            padding: 1rem;
-            border-radius: 1rem;
-            border: 1px solid #e2e8f0;
-            transition: 0.2s;
+
+        .card {
+            background: #fdfdfd;
+            padding: 1.5rem;
+            border-radius: 1.2rem;
+            border: 1px solid #eee;
+            transition: all 0.3s ease;
         }
-        .bts-card:hover {
-            border-color: #e67e22;
-            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+
+        .card:hover {
+            border-color: var(--secondary);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
         }
-        .bts-card a {
-            display: inline-block;
-            margin-top: 0.6rem;
-            color: #e67e22;
-            font-weight: bold;
-            text-decoration: none;
-        }
-        .pdf-list {
-            list-style: none;
-            margin-top: 1rem;
-        }
-        .pdf-list li {
-            background: #f1f5f9;
-            margin: 0.6rem 0;
-            padding: 0.8rem;
+
+        /* --- PDF List --- */
+        .pdf-item {
+            background: #f8fafc;
+            padding: 1rem 1.5rem;
             border-radius: 1rem;
             display: flex;
-            flex-wrap: wrap;
+            justify-content: space-between;
             align-items: center;
-            gap: 0.8rem;
-        }
-        .pdf-list li a {
-            flex: 1;
-            color: #0f2b3d;
+            margin-bottom: 1rem;
             text-decoration: none;
-            font-weight: 500;
+            color: var(--dark);
+            border-left: 4px solid var(--secondary);
+            transition: 0.2s;
         }
-        .pdf-list li a:hover {
-            color: #e67e22;
-        }
-        .badge {
-            background: #e67e22;
-            color: white;
-            font-size: 0.7rem;
-            padding: 0.2rem 0.6rem;
-            border-radius: 20px;
-        }
-        iframe {
-            width: 100%;
-            height: 500px;
-            border: none;
-            border-radius: 1rem;
-            background: #f1f5f9;
-        }
+
+        .pdf-item:hover { background: #f1f5f9; transform: scale(1.01); }
+
+        /* --- Footer --- */
         footer {
+            background: var(--primary);
+            color: white;
+            padding: 4rem 2rem;
             text-align: center;
-            background: #0f2b3d;
-            color: #cbd5e1;
-            padding: 1.5rem;
-            border-top-left-radius: 1.5rem;
-            border-top-right-radius: 1.5rem;
-            margin-top: 2rem;
+            border-top-left-radius: 3rem;
+            border-top-right-radius: 3rem;
         }
-        @media (max-width: 700px) {
-            header h1 { font-size: 1.6rem; }
-            nav a { padding: 0.3rem 0.8rem; font-size: 0.8rem; }
-            h2 { font-size: 1.4rem; }
+
+        .social-links { margin: 1.5rem 0; font-size: 1.5rem; }
+        .social-links a { color: white; margin: 0 10px; transition: 0.3s; }
+        .social-links a:hover { color: var(--secondary); }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header h1 { font-size: 2rem; }
+            nav { padding: 0.5rem; }
+            nav a { margin: 5px 10px; font-size: 0.85rem; }
+            section { padding: 1.5rem; }
         }
     </style>
 </head>
 <body>
+
 <header>
-    <h1>📘 Bac Maths Maroc</h1>
-    <p>Plateforme de cours, exercices, des mathématiques</p>
+    <h1><i class="fas fa-graduation-cap"></i> Bac Maths Maroc</h1>
+    <p>Votre réussite commence ici. Ressources gratuites pour le Baccalauréat et les filières BTS au Maroc.</p>
+    <div class="cta">
+        <a href="https://wa.me/2126XXXXXXXX"><i class="fab fa-whatsapp"></i> Réserver un cours particulier</a>
+    </div>
 </header>
+
 <nav>
     <a href="#accueil">Accueil</a>
-    <a href="#cours">Cours</a>
-    <a href="#exercices">Exercices</a>
-    <a href="#annales">Annales</a>
-    <a href="#astuces">Astuces & Quiz</a>
-    <a href="#bts">BTS Maroc</a>
-    <a href="#pdfs">PDF</a>
+    <a href="#cours">Cours/Exos</a>
+    <a href="#bts">BTS</a>
+    <a href="#pdfs">Bibliothèque</a>
     <a href="#contact">Contact</a>
 </nav>
+
 <main>
     <section id="accueil">
-        <h2>🏠 Accueil</h2>
-        <p>Bienvenue sur votre plateforme de mathématiques pour le baccalauréat marocain (sciences maths, sciences expérimentales) et les filières BTS. Découvrez des cours, exercices, annales, astuces et quiz.</p>
+        <h2><i class="fas fa-home"></i> Bienvenue</h2>
+        <p>Préparez vos examens avec sérénité. Nous regroupons les meilleures ressources pour les filières <strong>Sciences Maths</strong>, <strong>SVT</strong> et <strong>PC</strong>, ainsi que les modules spécifiques aux <strong>BTS</strong>.</p>
     </section>
+
     <section id="cours">
-        <h2>📚 Cours</h2>
-        <p>Retrouvez ci-dessous des liens vers des cours (PDF) organisés par niveau :</p>
-        <ul class="pdf-list">
-            <li><a href="#">📘 Analyse – Limites, continuité, dérivées (Tronc commun)</a> <span class="badge">À venir</span></li>
-            <li><a href="#">📗 Algèbre – Nombres complexes, polynômes (1ère Bac)</a> <span class="badge">À venir</span></li>
-            <li><a href="#">📙 Probabilités et statistiques (2ème Bac)</a> <span class="badge">À venir</span></li>
-        </ul>
-    </section>
-    <section id="exercices">
-        <h2>✏️ Exercices</h2>
-        <p>Des centaines d'exercices corrigés classés par chapitre. Premiers exemples :</p>
-        <ul>
-            <li><a href="#">Exercices sur les suites numériques</a></li>
-            <li><a href="#">Fonctions logarithmes et exponentielles – 30 exercices</a></li>
-            <li><a href="#">Géométrie dans l'espace (Bac)</a></li>
-        </ul>
-    </section>
-    <section id="annales">
-        <h2>📄 Annales Bac Maroc</h2>
-        <p>Épreuves de mathématiques des sessions 2020 à 2025 :</p>
-        <ul>
-            <li><a href="#">Bac 2025 – Sciences maths (SM)</a></li>
-            <li><a href="#">Bac 2024 – Sciences expérimentales (SVT)</a></li>
-            <li><a href="#">Bac 2023 – Sciences maths (A&B)</a></li>
-        </ul>
-    </section>
-    <section id="astuces">
-        <h2>🧠 Astuces & Quiz Mathématiques</h2>
-        <p>Contenu interactif :</p>
-        <iframe src="https://htmlpreview.github.io/?https://raw.githubusercontent.com/fadilimostafa07/mathematiques-maroc/main/mathematica.html" title="Astuces Math"></iframe>
-        <p><small>Si le quiz ne s'affiche pas, vérifiez que le fichier <code>mathematica.html</code> est bien présent à la racine de votre dépôt.</small></p>
-    </section>
-    <section id="bts">
-        <h2>🇲🇦 BTS au Maroc – Mathématiques appliquées</h2>
-        <div class="bts-grid">
-            <div class="bts-card">
-                <h3>BTS DSI (Développement Systèmes d'Information)</h3>
-                <p>Probabilités, stats, algorithmique, algèbre de Boole.</p>
-                <a href="#">Ressources →</a>
+        <h2><i class="fas fa-book"></i> Programme Bac</h2>
+        <div class="grid">
+            <div class="card">
+                <h3><i class="fas fa-chart-line"></i> Analyse</h3>
+                <p>Limites, Continuité, Dérivabilité et intégrales.</p>
             </div>
-            <div class="bts-card">
-                <h3>BTS CG (Comptabilité Gestion)</h3>
-                <p>Mathématiques financières : intérêts, annuités, VAN, TRI.</p>
-                <a href="#">Ressources →</a>
+            <div class="card">
+                <h3><i class="fas fa-square-root-alt"></i> Algèbre</h3>
+                <p>Nombres complexes, structures algébriques et arithmétique.</p>
             </div>
-            <div class="bts-card">
-                <h3>BTS Électrotechnique</h3>
-                <p>Nombres complexes, transformée de Laplace.</p>
-                <a href="#">Ressources →</a>
-            </div>
-            <div class="bts-card">
-                <h3>BTS Bâtiment</h3>
-                <p>Géométrie vectorielle, résistance des matériaux.</p>
-                <a href="#">Ressources →</a>
+            <div class="card">
+                <h3><i class="fas fa-dice"></i> Probabilités</h3>
+                <p>Dénombrement, probabilités conditionnelles et variables aléatoires.</p>
             </div>
         </div>
     </section>
-    <section id="pdfs">
-        <h2>📁 Bibliothèque PDF</h2>
-        <p>Voici des fichiers disponibles (ajoutez vos propres PDF dans le dossier <code>pdfs/</code>) :</p>
-        <ul class="pdf-list">
-            <li><a href="#">📖 Cours complet – Mathématiques financières (BTS CG)</a> <span class="badge">Bientôt</span></li>
-            <li><a href="#">📖 Algèbre linéaire – Matrices et systèmes (BTS DSI)</a> <span class="badge">Bientôt</span></li>
-            <li><a href="#">📖 Annales Bac Maths Maroc 2024 corrigées</a> <span class="badge">Bientôt</span></li>
-        </ul>
-        <p><strong>➡️ Pour mettre vos PDF :</strong> déposez les fichiers dans un dossier <code>pdfs</code> sur GitHub, puis remplacez les liens ci-dessus par <code>https://raw.githack.com/fadilimostafa07/mathematiques-maroc/main/pdfs/nomfichier.pdf</code>.</p>
+
+    <section id="bts">
+        <h2><i class="fas fa-university"></i> Filières BTS Maroc</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>BTS DSI / Réseaux</h3>
+                <p>Algèbre de Boole, Logique et Statistiques.</p>
+                <a href="#pdfs" style="color:var(--secondary); text-decoration:none; font-weight:bold;">Voir PDF →</a>
+            </div>
+            <div class="card">
+                <h3>BTS Comptabilité (CG)</h3>
+                <p>Maths financières, Intérêts simples/composés.</p>
+                <a href="#pdfs" style="color:var(--secondary); text-decoration:none; font-weight:bold;">Voir PDF →</a>
+            </div>
+        </div>
     </section>
+
+    <section id="pdfs">
+        <h2><i class="fas fa-file-pdf"></i> Bibliothèque Numérique</h2>
+        <a href="pdfs/cours-maths-financieres-bts.pdf" class="pdf-item" target="_blank">
+            <span><i class="far fa-file-pdf"></i> Maths Financières - BTS CG</span>
+            <i class="fas fa-download"></i>
+        </a>
+        <a href="pdfs/algebre-lineaire-DSI.pdf" class="pdf-item" target="_blank">
+            <span><i class="far fa-file-pdf"></i> Algèbre Linéaire - BTS DSI</span>
+            <i class="fas fa-download"></i>
+        </a>
+        <a href="pdfs/annales-bac-maths-maroc.pdf" class="pdf-item" target="_blank">
+            <span><i class="far fa-file-pdf"></i> Annales Bac (Dernières sessions)</span>
+            <i class="fas fa-download"></i>
+        </a>
+    </section>
+
     <section id="contact">
-        <h2>📞 Contact</h2>
-        <p>WhatsApp : +212 6XX XXX XXX (à compléter)</p>
-        <p>GitHub : <a href="https://github.com/fadilimostafa07/mathematiques-maroc">https://github.com/fadilimostafa07/mathematiques-maroc</a></p>
+        <h2><i class="fas fa-envelope"></i> Un besoin spécifique ?</h2>
+        <p>Besoin de coaching personnalisé ou de supports supplémentaires ?</p>
+        <div class="cta" style="text-align: center;">
+            <a href="https://wa.me/2126XXXXXXXX"><i class="fab fa-whatsapp"></i> Contact direct via WhatsApp</a>
+        </div>
     </section>
 </main>
+
 <footer>
-    <p>© 2026 Bac Maths Maroc – Plateforme évolutive</p>
+    <p><strong>Bac Maths Maroc</strong> - Créé par Mostafa Fadili</p>
+    <div class="social-links">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="https://github.com/fadilimostafa07/mathematiques-maroc"><i class="fab fa-github"></i></a>
+    </div>
+    <p>© 2026 Tous droits réservés.</p>
 </footer>
+
 </body>
 </html>
