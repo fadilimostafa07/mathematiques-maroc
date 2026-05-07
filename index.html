@@ -2,268 +2,787 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bac Maths Maroc | Cours, BTS & Réussite</title>
-    <meta name="description" content="Plateforme gratuite de mathématiques pour le Bac Maroc et BTS. Cours, exercices corrigés et soutien scolaire personnalisé.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Bac Maths Maroc | Cours particuliers de maths – Professeur agrégé de mathématiques Mostafa Fadili</title>
+    <meta name="description" content="Cours particuliers de mathématiques pour Bac Maroc (SM, PC, SVT) et BTS. Méthode interactive, PDF, quiz, coaching WhatsApp. Professeur agrégé – Mostafa Fadili.">
+    <meta name="keywords" content="maths bac maroc, professeur agrégé maths maroc, cours maths maroc, BTS maroc, annales bac, soutien scolaire maths, Mostafa Fadili, référentiel BTS Maroc, programme lycée maths Maroc">
+    <meta name="author" content="Mostafa Fadili">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0b3b5f">
+    <meta name="google-site-verification" content="CODE_GOOGLE"> <!-- Remplacez par votre code -->
+    <link rel="canonical" href="https://fadilimostafa07.github.io/mathematiques-maroc/">
     
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <!-- Font Awesome pour les icônes -->
+    <!-- Open Graph -->
+    <meta property="og:title" content="Bac Maths Maroc – Professeur agrégé Mostafa Fadili">
+    <meta property="og:description" content="Cours particuliers maths Bac et BTS. Ressources gratuites, coaching WhatsApp.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://fadilimostafa07.github.io/mathematiques-maroc/">
+    <meta property="og:image" content="https://fadilimostafa07.github.io/mathematiques-maroc/favicon.png">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Bac Maths Maroc – Mostafa Fadili">
+    <meta name="twitter:description" content="Professeur agrégé de maths, cours particuliers Bac et BTS.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    
+    <!-- Google Analytics (remplacez G-XXXXXXXXXX par votre ID) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Mostafa Fadili",
+        "jobTitle": "Professeur agrégé de mathématiques",
+        "url": "https://fadilimostafa07.github.io/mathematiques-maroc/",
+        "sameAs": ["https://wa.me/212610864319", "mailto:fadilimostafa@gmail.com"],
+        "telephone": "+212610864319",
+        "email": "fadilimostafa@gmail.com"
+    }
+    </script>
+    
+    <!-- Google Fonts & Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
     <style>
         :root {
             --primary: #0b3b5f;
             --secondary: #e67e22;
             --accent: #1b5a7a;
-            --light: #f4f7fc;
-            --dark: #1e2a3e;
+            --bg: #f8fafc;
             --white: #ffffff;
+            --dark: #1e2a3e;
+            --shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+            --success: #2ecc71;
+            --error: #e74c3c;
+            --gray-light: #eef2f5;
         }
-
-        html { scroll-behavior: smooth; }
+        body.dark {
+            --primary: #1e2a3e;
+            --bg: #121826;
+            --white: #1e2432;
+            --dark: #eef2f5;
+            --gray-light: #2a3440;
+            --shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+        }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-
+        html { scroll-behavior: smooth; }
         body {
             font-family: 'Poppins', sans-serif;
-            background: var(--light);
+            background: var(--bg);
             color: var(--dark);
             line-height: 1.6;
+            transition: background 0.3s, color 0.2s;
         }
-
-        /* --- Header & Hero --- */
-        header {
-            background: linear-gradient(135deg, var(--primary), var(--accent));
-            color: var(--white);
-            text-align: center;
-            padding: 4rem 1rem;
-            border-bottom-left-radius: 3rem;
-            border-bottom-right-radius: 3rem;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        img { max-width: 100%; height: auto; }
+        @keyframes floatTitle {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+            100% { transform: translateY(0); }
         }
-
-        header h1 { font-size: 2.8rem; margin-bottom: 1rem; letter-spacing: -1px; }
-        header p { font-size: 1.2rem; opacity: 0.9; max-width: 700px; margin: 0 auto; }
-
-        .cta { margin-top: 2rem; }
-        .cta a {
+        header h1 { animation: floatTitle 3s ease-in-out infinite; }
+        .theme-switch {
+            position: fixed;
+            bottom: 100px;
+            right: 20px;
             background: var(--secondary);
-            color: white;
-            padding: 15px 35px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            display: inline-block;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(230, 126, 34, 0.4);
-        }
-
-        .cta a:hover {
-            background: #d35400;
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(230, 126, 34, 0.6);
-        }
-
-        /* --- Navigation --- */
-        nav {
-            background: var(--white);
-            padding: 1rem;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        nav a {
-            margin: 0 15px;
-            text-decoration: none;
-            color: var(--primary);
-            font-weight: 600;
-            font-size: 0.95rem;
-            transition: color 0.3s;
-        }
-
-        nav a:hover { color: var(--secondary); }
-
-        /* --- Sections --- */
-        main { max-width: 1100px; margin: 3rem auto; padding: 0 20px; }
-
-        section {
-            background: var(--white);
-            margin-bottom: 3rem;
-            padding: 2.5rem;
-            border-radius: 2rem;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
-            border: 1px solid rgba(0,0,0,0.02);
-        }
-
-        h2 {
-            color: var(--primary);
-            font-size: 2rem;
-            margin-bottom: 1.5rem;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
             display: flex;
             align-items: center;
-            gap: 10px;
-        }
-
-        h2 i { color: var(--secondary); font-size: 1.5rem; }
-
-        /* --- Grid System --- */
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .card {
-            background: #fdfdfd;
-            padding: 1.5rem;
-            border-radius: 1.2rem;
-            border: 1px solid #eee;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 1001;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
             transition: all 0.3s ease;
         }
-
-        .card:hover {
-            border-color: var(--secondary);
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        .theme-switch:hover { transform: scale(1.05) rotate(15deg); }
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #25d366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            transition: all 0.3s;
+            text-decoration: none;
         }
-
-        /* --- PDF List --- */
-        .pdf-item {
-            background: #f8fafc;
-            padding: 1rem 1.5rem;
-            border-radius: 1rem;
+        .whatsapp-float:hover { transform: scale(1.1); background: #128c7e; }
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background: var(--primary);
+            color: white;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 1000;
+            opacity: 0;
+            transition: 0.2s;
+            pointer-events: none;
+        }
+        .back-to-top.show { opacity: 1; pointer-events: auto; }
+        header {
+            background: linear-gradient(145deg, var(--primary), var(--accent));
+            color: white;
+            text-align: center;
+            padding: 5rem 1rem 6rem;
+            clip-path: ellipse(150% 100% at 50% 0%);
+            margin-bottom: 2rem;
+        }
+        .cta-header a {
+            background: var(--secondary);
+            padding: 0.9rem 2rem;
+            border-radius: 50px;
+            display: inline-block;
+            margin-top: 1.5rem;
+            font-weight: bold;
+            transition: 0.3s;
+            color: white;
+            text-decoration: none;
+        }
+        .cta-header a:hover { transform: translateY(-3px); background: #d35400; }
+        nav {
+            background: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(12px);
+            padding: 0.8rem 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 999;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 1rem;
+            flex-wrap: wrap;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+        }
+        body.dark nav { background: rgba(30, 36, 50, 0.96); }
+        .nav-links {
+            display: flex;
+            gap: 0.8rem;
+            flex-wrap: wrap;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            border-radius: 40px;
+            transition: all 0.25s ease;
+        }
+        body.dark .nav-links a { color: var(--dark); }
+        .nav-links a:hover { background: var(--secondary); color: white; transform: translateY(-2px); }
+        .menu-icon { display: none; font-size: 1.8rem; cursor: pointer; }
+        #menu-toggle { display: none; }
+        @media (max-width: 780px) {
+            .menu-icon { display: block; }
+            .nav-links {
+                display: none;
+                width: 100%;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 1rem;
+            }
+            #menu-toggle:checked + .menu-icon + .nav-links { display: flex; }
+        }
+        main { max-width: 1280px; margin: 0 auto; padding: 0 20px; }
+        section { padding: 4rem 0; border-bottom: 1px solid rgba(0, 0, 0, 0.05); }
+        @media (max-width: 700px) { section { padding: 2rem 0; } }
+        .section-title {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        .section-title span { color: var(--secondary); }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+        .card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 1.5rem;
+            box-shadow: var(--shadow);
+            transition: all 0.35s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+        }
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 40px rgba(0, 0, 0, 0.12);
+            border-bottom: 3px solid var(--secondary);
+        }
+        .badge-new {
+            background: var(--success);
+            color: white;
+            font-size: 0.7rem;
+            padding: 0.2rem 0.6rem;
+            border-radius: 20px;
+            margin-left: 0.5rem;
+            vertical-align: middle;
+        }
+        .btn {
+            background: var(--secondary);
+            padding: 0.5rem 1rem;
+            border-radius: 40px;
+            display: inline-block;
+            color: white;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: all 0.25s;
+            font-size: 0.8rem;
+        }
+        .btn:hover { background: #d35400; transform: scale(1.02); }
+        .resource-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+        }
+        .btn-pdf { background: #3498db; }
+        .btn-exo { background: #2ecc71; }
+        .btn-corrige { background: #e67e22; }
+        .btn-video { background: #e74c3c; }
+        .search-box { margin-bottom: 2rem; text-align: center; }
+        .search-box input {
+            padding: 0.8rem;
+            width: 100%;
+            max-width: 400px;
+            border-radius: 50px;
+            border: 1px solid #ccc;
+            font-family: inherit;
+            background: var(--white);
+            color: var(--dark);
+        }
+        .pdf-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--white);
+            padding: 1rem;
+            border-radius: 1rem;
+            margin-bottom: 0.8rem;
             text-decoration: none;
             color: var(--dark);
-            border-left: 4px solid var(--secondary);
             transition: 0.2s;
         }
-
-        .pdf-item:hover { background: #f1f5f9; transform: scale(1.01); }
-
-        /* --- Footer --- */
+        .pdf-item:hover { background: var(--secondary); color: white; transform: translateX(5px); }
+        .quiz-container {
+            background: var(--primary);
+            color: white;
+            border-radius: 2rem;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+        .counter { font-size: 3rem; font-weight: 700; color: var(--secondary); }
+        .testimonial-card {
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: 1rem;
+            font-style: italic;
+            box-shadow: var(--shadow);
+            transition: 0.3s;
+        }
+        .testimonial-card:hover { transform: translateY(-5px); }
+        .honeypot { position: absolute; left: -9999px; opacity: 0; }
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 1rem;
+        }
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
         footer {
             background: var(--primary);
             color: white;
-            padding: 4rem 2rem;
+            padding: 3rem;
             text-align: center;
-            border-top-left-radius: 3rem;
-            border-top-right-radius: 3rem;
         }
-
-        .social-links { margin: 1.5rem 0; font-size: 1.5rem; }
-        .social-links a { color: white; margin: 0 10px; transition: 0.3s; }
-        .social-links a:hover { color: var(--secondary); }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            header h1 { font-size: 2rem; }
-            nav { padding: 0.5rem; }
-            nav a { margin: 5px 10px; font-size: 0.85rem; }
-            section { padding: 1.5rem; }
+        footer a { color: white; transition: 0.2s; }
+        footer a:hover { color: var(--secondary); }
+        details summary { cursor: pointer; font-weight: 600; padding: 0.5rem 0; }
+        details summary:hover { color: var(--secondary); }
+        .chapter-item {
+            margin-bottom: 1.2rem;
+            padding: 1rem;
+            background: var(--white);
+            border-radius: 1rem;
         }
     </style>
 </head>
 <body>
 
+<div class="theme-switch" id="darkModeToggle">
+    <i class="fas fa-moon"></i>
+</div>
+<a href="https://wa.me/212610864319" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+    <i class="fab fa-whatsapp"></i>
+</a>
+<div class="back-to-top" id="backToTop">
+    <i class="fas fa-arrow-up"></i>
+</div>
+
 <header>
-    <h1><i class="fas fa-graduation-cap"></i> Bac Maths Maroc</h1>
-    <p>Votre réussite commence ici. Ressources gratuites pour le Baccalauréat et les filières BTS au Maroc.</p>
-    <div class="cta">
-        <a href="https://wa.me/2126XXXXXXXX"><i class="fab fa-whatsapp"></i> Réserver un cours particulier</a>
+    <h1 data-aos="fade-down">🚀 Domine les Maths au Bac</h1>
+    <p data-aos="fade-up">Cours particuliers par Mostafa Fadili – Professeur agrégé de mathématiques</p>
+    <div class="cta-header">
+        <a href="#contact">📞 Réserver un cours</a>
     </div>
 </header>
 
 <nav>
-    <a href="#accueil">Accueil</a>
-    <a href="#cours">Cours/Exos</a>
-    <a href="#bts">BTS</a>
-    <a href="#pdfs">Bibliothèque</a>
-    <a href="#contact">Contact</a>
+    <div style="font-weight:700;"><i class="fas fa-graduation-cap"></i> Bac Maths Maroc</div>
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="menu-icon"><i class="fas fa-bars"></i></label>
+    <div class="nav-links">
+        <a href="#cours">Cours</a>
+        <a href="#prof">Prof</a>
+        <a href="#bts">BTS</a>
+        <a href="#referentiel">Réf. BTS</a>
+        <a href="#lycee">Lycée</a>
+        <a href="#annales">Annales</a>
+        <a href="#astuces">Quiz</a>
+        <a href="#pdfs">PDF</a>
+        <a href="#packs">Forfaits</a>
+        <a href="#videos">Vidéos</a>
+        <a href="#avis">Avis</a>
+        <a href="#contact">Contact</a>
+    </div>
 </nav>
 
 <main>
-    <section id="accueil">
-        <h2><i class="fas fa-home"></i> Bienvenue</h2>
-        <p>Préparez vos examens avec sérénité. Nous regroupons les meilleures ressources pour les filières <strong>Sciences Maths</strong>, <strong>SVT</strong> et <strong>PC</strong>, ainsi que les modules spécifiques aux <strong>BTS</strong>.</p>
+    <!-- Section Professeur -->
+    <section id="prof">
+        <h2 class="section-title">👨‍🏫 <span>Mostafa Fadili</span> – Professeur agrégé de mathématiques</h2>
+        <div class="grid">
+            <div class="card" data-aos="fade-right">
+                <i class="fas fa-chalkboard-user" style="font-size:2.5rem; color:var(--secondary);"></i>
+                <h3>Parcours & Diplômes</h3>
+                <p><strong>Professeur agrégé de mathématiques</strong> avec plus de 8 ans d'expérience au Maroc. Spécialiste du baccalauréat (SM, PC, SVT) et des filières BTS.</p>
+                <p><i class="fas fa-phone-alt"></i> <strong>WhatsApp :</strong> <a href="https://wa.me/212610864319" target="_blank" rel="noopener noreferrer">+212 6 1086 4319</a></p>
+                <p><i class="fas fa-envelope"></i> <strong>Email :</strong> fadilimostafa@gmail.com</p>
+            </div>
+            <div class="card" data-aos="fade-left">
+                <i class="fas fa-chart-simple"></i>
+                <h3>Chiffres clés (réels)</h3>
+                <div class="counter" id="studentCounter">0</div>
+                <p>élèves accompagnés depuis 2023</p>
+                <div class="counter" id="successCounter">0</div>
+                <p>taux de réussite au bac (moyenne)</p>
+                <small>*Données actualisées chaque semestre</small>
+            </div>
+        </div>
+        <div class="card" data-aos="zoom-in" style="margin-top:2rem; text-align:center;">
+            <h3>🎯 Pourquoi me choisir ?</h3>
+            <div class="grid" style="margin-top:1rem;">
+                <div><i class="fas fa-check-circle" style="color:var(--secondary);"></i> Méthode personnalisée</div>
+                <div><i class="fas fa-check-circle" style="color:var(--secondary);"></i> Suivi WhatsApp illimité</div>
+                <div><i class="fas fa-check-circle" style="color:var(--secondary);"></i> Cours interactifs et PDF</div>
+                <div><i class="fas fa-check-circle" style="color:var(--secondary);"></i> Tarifs transparents</div>
+            </div>
+        </div>
     </section>
 
+    <!-- Cours -->
     <section id="cours">
-        <h2><i class="fas fa-book"></i> Programme Bac</h2>
+        <h2 class="section-title">📚 Programme <span>Bac & BTS</span></h2>
         <div class="grid">
-            <div class="card">
-                <h3><i class="fas fa-chart-line"></i> Analyse</h3>
-                <p>Limites, Continuité, Dérivabilité et intégrales.</p>
-            </div>
-            <div class="card">
-                <h3><i class="fas fa-square-root-alt"></i> Algèbre</h3>
-                <p>Nombres complexes, structures algébriques et arithmétique.</p>
-            </div>
-            <div class="card">
-                <h3><i class="fas fa-dice"></i> Probabilités</h3>
-                <p>Dénombrement, probabilités conditionnelles et variables aléatoires.</p>
-            </div>
+            <div class="card"><i class="fas fa-chart-line"></i><h3>Analyse</h3><p>Limites, dérivées, intégrales – cours + 50 exos corrigés.</p><span class="badge-new">Nouveau</span></div>
+            <div class="card"><i class="fas fa-square-root-alt"></i><h3>Algèbre</h3><p>Nombres complexes, polynômes, équations diff.</p></div>
+            <div class="card"><i class="fas fa-dice-d6"></i><h3>Probabilités & Stats</h3><p>Variables aléatoires, lois, échantillonnage.</p></div>
         </div>
     </section>
 
-    <section id="bts">
-        <h2><i class="fas fa-university"></i> Filières BTS Maroc</h2>
+    <!-- Aperçu BTS -->
+    <section id="bts" style="background: var(--gray-light); border-radius: 3rem; padding: 3rem 1.5rem;">
+        <h2 class="section-title">🎓 <span>Aperçu des BTS</span> (filières)</h2>
         <div class="grid">
-            <div class="card">
-                <h3>BTS DSI / Réseaux</h3>
-                <p>Algèbre de Boole, Logique et Statistiques.</p>
-                <a href="#pdfs" style="color:var(--secondary); text-decoration:none; font-weight:bold;">Voir PDF →</a>
-            </div>
-            <div class="card">
-                <h3>BTS Comptabilité (CG)</h3>
-                <p>Maths financières, Intérêts simples/composés.</p>
-                <a href="#pdfs" style="color:var(--secondary); text-decoration:none; font-weight:bold;">Voir PDF →</a>
-            </div>
+            <div class="card"><i class="fas fa-laptop-code"></i> BTS DSI – Informatique</div>
+            <div class="card"><i class="fas fa-chart-pie"></i> BTS CG – Comptabilité</div>
+            <div class="card"><i class="fas fa-hard-hat"></i> BTS Bâtiment</div>
+            <div class="card"><i class="fas fa-bolt"></i> BTS Électrotechnique</div>
+            <div class="card"><i class="fas fa-globe"></i> BTS Tourisme</div>
+            <div class="card"><i class="fas fa-chart-line"></i> BTS Management</div>
+        </div>
+        <p class="text-center" style="margin-top:1rem;">📌 <a href="#referentiel">Voir le référentiel national complet (programmes détaillés avec ressources)</a></p>
+    </section>
+
+    <!-- ========== SECTION RÉFÉRENTIEL OFFICIEL BTS (DÉTAILLÉE) ========== -->
+    <section id="referentiel" style="background: var(--gray-light); border-radius: 3rem; padding: 3rem 1.5rem; margin: 2rem 0;">
+        <h2 class="section-title">📖 <span>Référentiel officiel</span> – Mathématiques BTS (Avril 2024)</h2>
+        <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem auto;">
+            Programme national détaillé des mathématiques pour toutes les filières du Brevet de Technicien Supérieur au Maroc.
+            Pour chaque chapitre, vous trouverez des liens vers les ressources (cours PDF, énoncés, corrigés, vidéos).
+        </p>
+        <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-bottom: 2rem;">
+            <a href="#filiere-sri" class="btn" style="background: var(--primary);">📡 SRI / DAI / DWFS</a>
+            <a href="#filiere-dia" class="btn" style="background: var(--primary);">🤖 DIA</a>
+            <a href="#filiere-industrielles" class="btn" style="background: var(--primary);">🏭 Industrielles</a>
+            <a href="#filiere-electrotech" class="btn" style="background: var(--primary);">⚡ ELT / EII / EREE</a>
+        </div>
+
+        <!-- SRI/DAI/DWFS -->
+        <div id="filiere-sri" class="card" data-aos="fade-up" style="margin-bottom: 2rem;">
+            <h3 style="color: var(--secondary);"><i class="fas fa-laptop-code"></i> SRI, DAI, DWFS – 4h/semaine</h3>
+            <details><summary>📘 Première année</summary><div style="margin-top:1rem;">
+                <div class="chapter-item"><strong>1. Principes de logique, langage ensembliste</strong><div class="resource-buttons"><a href="#" class="btn btn-pdf" target="_blank">📄 Cours PDF</a><a href="#" class="btn btn-exo" target="_blank">📝 Énoncés</a><a href="#" class="btn btn-corrige" target="_blank">✅ Corrigés</a><a href="#" class="btn btn-video" target="_blank">🎥 Vidéos</a></div></div>
+                <div class="chapter-item"><strong>2. Fonctions numériques d’une variable réelle</strong><div class="resource-buttons"><a href="#" class="btn btn-pdf" target="_blank">📄 Cours PDF</a><a href="#" class="btn btn-exo" target="_blank">📝 Énoncés</a><a href="#" class="btn btn-corrige" target="_blank">✅ Corrigés</a><a href="#" class="btn btn-video" target="_blank">🎥 Vidéos</a></div></div>
+                <div class="chapter-item"><strong>3. Développements limités</strong><div class="resource-buttons"><a href="#" class="btn btn-pdf" target="_blank">📄 Cours PDF</a><a href="#" class="btn btn-exo" target="_blank">📝 Énoncés</a><a href="#" class="btn btn-corrige" target="_blank">✅ Corrigés</a><a href="#" class="btn btn-video" target="_blank">🎥 Vidéos</a></div></div>
+                <div class="chapter-item"><strong>4. Suites numériques</strong><div class="resource-buttons"><a href="#" class="btn btn-pdf" target="_blank">📄 Cours PDF</a><a href="#" class="btn btn-exo" target="_blank">📝 Énoncés</a><a href="#" class="btn btn-corrige" target="_blank">✅ Corrigés</a><a href="#" class="btn btn-video" target="_blank">🎥 Vidéos</a></div></div>
+                <div class="chapter-item"><strong>5. Intégrales simples</strong><div class="resource-buttons"><a href="#" class="btn btn-pdf" target="_blank">📄 Cours PDF</a><a href="#" class="btn btn-exo" target="_blank">📝 Énoncés</a><a href="#" class="btn btn-corrige" target="_blank">✅ Corrigés</a><a href="#" class="btn btn-video" target="_blank">🎥 Vidéos</a></div></div>
+                <div class="chapter-item"><strong>6. Équations différentielles linéaires</strong><div class="resource-buttons"><a href="#" class="btn btn-pdf" target="_blank">📄 Cours PDF</a><a href="#" class="btn btn-exo" target="_blank">📝 Énoncés</a><a href="#" class="btn btn-corrige" target="_blank">✅ Corrigés</a><a href="#" class="btn btn-video" target="_blank">🎥 Vidéos</a></div></div>
+                <div class="chapter-item"><strong>7. Calcul matriciel</strong><div class="resource-buttons"><a href="#" class="btn btn-pdf" target="_blank">📄 Cours PDF</a><a href="#" class="btn btn-exo" target="_blank">📝 Énoncés</a><a href="#" class="btn btn-corrige" target="_blank">✅ Corrigés</a><a href="#" class="btn btn-video" target="_blank">🎥 Vidéos</a></div></div>
+            </div></details>
+            <details><summary>📘 Deuxième année</summary><div style="margin-top:1rem;">
+                <div class="chapter-item"><strong>1. Intégrales généralisées</strong><div class="resource-buttons"><a href="#" class="btn btn-pdf" target="_blank">📄 Cours PDF</a><a href="#" class="btn btn-exo" target="_blank">📝 Énoncés</a><a href="#" class="btn btn-corrige" target="_blank">✅ Corrigés</a><a href="#" class="btn btn-video" target="_blank">🎥 Vidéos</a></div></div>
+                <div class="chapter-item"><strong>2. Séries numériques</strong><div class="resource-buttons"><a href="#" class="btn btn-pdf" target="_blank">📄 Cours PDF</a><a href="#" class="btn btn-exo" target="_blank">📝 Énoncés</a><a href="#" class="btn btn-corrige" target="_blank">✅ Corrigés</a><a href="#" class="btn btn-video" target="_blank">🎥 Vidéos</a></div></div>
+                <div class="chapter-item"><strong>3. Espaces vectoriels et applications linéaires</strong><div class="resource-buttons"><a href="#" class="btn btn-pdf" target="_blank">📄 Cours PDF</a><a href="#" class="btn btn-exo" target="_blank">📝 Énoncés</a><a href="#" class="btn btn-corrige" target="_blank">✅ Corrigés</a><a href="#" class="btn btn-video" target="_blank">🎥 Vidéos</a></div></div>
+                <div class="chapter-item"><strong>4. Diagonalisation</strong><div class="resource-buttons"><a href="#" class="btn btn-pdf" target="_blank">📄 Cours PDF</a><a href="#" class="btn btn-exo" target="_blank">📝 Énoncés</a><a href="#" class="btn btn-corrige" target="_blank">✅ Corrigés</a><a href="#" class="btn btn-video" target="_blank">🎥 Vidéos</a></div></div>
+                <div class="chapter-item"><strong>5. Fonctions de deux variables</strong><div class="resource-buttons"><a href="#" class="btn btn-pdf" target="_blank">📄 Cours PDF</a><a href="#" class="btn btn-exo" target="_blank">📝 Énoncés</a><a href="#" class="btn btn-corrige" target="_blank">✅ Corrigés</a><a href="#" class="btn btn-video" target="_blank">🎥 Vidéos</a></div></div>
+                <div class="chapter-item"><strong>6. Statistiques descriptives</strong><div class="resource-buttons"><a href="#" class="btn btn-pdf" target="_blank">📄 Cours PDF</a><a href="#" class="btn btn-exo" target="_blank">📝 Énoncés</a><a href="#" class="btn btn-corrige" target="_blank">✅ Corrigés</a><a href="#" class="btn btn-video" target="_blank">🎥 Vidéos</a></div></div>
+                <div class="chapter-item"><strong>7. Probabilités sur un ensemble fini</strong><div class="resource-buttons"><a href="#" class="btn btn-pdf" target="_blank">📄 Cours PDF</a><a href="#" class="btn btn-exo" target="_blank">📝 Énoncés</a><a href="#" class="btn btn-corrige" target="_blank">✅ Corrigés</a><a href="#" class="btn btn-video" target="_blank">🎥 Vidéos</a></div></div>
+            </div></details>
+        </div>
+
+        <!-- DIA (Intelligence Artificielle) -->
+        <div id="filiere-dia" class="card" data-aos="fade-up" style="margin-bottom: 2rem;">
+            <h3 style="color: var(--secondary);"><i class="fas fa-microchip"></i> DIA – 6h/semaine</h3>
+            <details><summary>📘 Première année</summary><div style="margin-top:1rem;">
+                <!-- mêmes chapitres que SRI + Graphes -->
+                <div class="chapter-item"><strong>1. Logique et ensembles</strong><div class="resource-buttons">@@BTN@@</div></div>
+                <div class="chapter-item"><strong>2. Fonctions réelles</strong><div class="resource-buttons">@@BTN@@</div></div>
+                <div class="chapter-item"><strong>3. Développements limités</strong><div class="resource-buttons">@@BTN@@</div></div>
+                <div class="chapter-item"><strong>4. Suites</strong><div class="resource-buttons">@@BTN@@</div></div>
+                <div class="chapter-item"><strong>5. Intégrales simples</strong><div class="resource-buttons">@@BTN@@</div></div>
+                <div class="chapter-item"><strong>6. Équations différentielles</strong><div class="resource-buttons">@@BTN@@</div></div>
+                <div class="chapter-item"><strong>7. Matrices</strong><div class="resource-buttons">@@BTN@@</div></div>
+                <div class="chapter-item"><strong>8. Graphes</strong><div class="resource-buttons">@@BTN@@</div></div>
+            </div></details>
+            <details><summary>📘 Deuxième année</summary><div style="margin-top:1rem;">
+                <div class="chapter-item"><strong>1. Intégrales généralisées</strong><div class="resource-buttons">@@BTN@@</div></div>
+                <div class="chapter-item"><strong>2. Séries</strong><div class="resource-buttons">@@BTN@@</div></div>
+                <div class="chapter-item"><strong>3. Espaces vectoriels</strong><div class="resource-buttons">@@BTN@@</div></div>
+                <div class="chapter-item"><strong>4. Diagonalisation</strong><div class="resource-buttons">@@BTN@@</div></div>
+                <div class="chapter-item"><strong>5. Fonctions de deux variables</strong><div class="resource-buttons">@@BTN@@</div></div>
+                <div class="chapter-item"><strong>6. Optimisation sous contraintes</strong><div class="resource-buttons">@@BTN@@</div></div>
+                <div class="chapter-item"><strong>7. Statistiques</strong><div class="resource-buttons">@@BTN@@</div></div>
+                <div class="chapter-item"><strong>8. Probabilités</strong><div class="resource-buttons">@@BTN@@</div></div>
+            </div></details>
+        </div>
+
+        <!-- Industrielles -->
+        <div id="filiere-industrielles" class="card" data-aos="fade-up" style="margin-bottom: 2rem;">
+            <h3 style="color: var(--secondary);"><i class="fas fa-industry"></i> Industrielles (MA, MI, ENG, PRO, BAT, MPC, ESA, MO, CPI, PTE) – 4h/semaine</h3>
+            <details><summary>📘 Première année</summary><div style="margin-top:1rem;">
+                <div class="chapter-item"><strong>1. Nombres complexes</strong><div class="resource-buttons">@@BTN@@</div></div>
+                <div class="chapter-item"><strong>2. Fonctions réelles</strong><div class="resource-buttons">@@BTN@@</div></div>
+                <div class="chapter-item"><strong>3. Développements limités</strong><div class="resource-buttons">@@BTN@@</div></div>
+                <div class="chapter-item"><strong>4. Intégrales simples</strong><div class="resource-buttons">@@BTN@@</div></div>
+                <div class="chapter-item"><strong>5. Équations différentielles</strong><div class="resource-buttons">@@BTN@@</div></div>
+                <div class="chapter-item"><strong>6. Séries numériques</strong><div class="resource-buttons">@@BTN@@</div></div>
+                <div class="chapter-item"><strong>7. Calcul matriciel</strong><div class="resource-buttons">@@BTN@@</div></div>
+            </div></details>
+            <details><summary>📘 Deuxième année</summary><div style="margin-top:1rem;">
+                <div class="chapter-item"><strong>1. Intégrales généralisées</strong><div class="resource-buttons">@@BTN@@</div></div>
+                <div class="chapter-item"><strong>2. Espaces vectoriels</strong><div class="resource-buttons">@@BTN@@</div></div>
+                <div class="chapter-item"><strong>3. Diagonalisation</strong><div class="resource-buttons">@@BTN@@</div></div>
+                <div class="chapter-item"><strong>4. Fonctions de deux variables</strong><div class="resource-buttons">@@BTN@@</div></div>
+                <div class="chapter-item"><strong>5. Intégrales doubles</strong><div class="resource-buttons">@@BTN@@</div></div>
+                <div class="chapter-item"><strong>6. Statistiques</strong><div class="resource-buttons">@@BTN@@</div></div>
+                <div class="chapter-item"><strong>7. Probabilités</strong><div class="resource-buttons">@@BTN@@</div></div>
+            </div></details>
+        </div>
+
+        <!-- Électrotechnique -->
+        <div id="filiere-electrotech" class="card" data-aos="fade-up" style="margin-bottom: 2rem;">
+            <h3 style="color: var(--secondary);"><i class="fas fa-bolt"></i> ELT, EII, EREE – 4h/semaine</h3>
+            <details><summary>📘 Première année</summary><div style="margin-top:1rem;">
+                <div class="chapter-item"><strong>1. Nombres complexes</strong><div class="resource-buttons">@@BTN@@</div></div>
+                <div class="chapter-item"><strong>2. Fonctions réelles</strong><div class="resource-buttons">@@BTN@@</div></div>
+                <div class="chapter-item"><strong>3. DL</strong><div class="resource-buttons">@@BTN@@</div></div>
+                <div class="chapter-item"><strong>4. Intégrales simples</strong><div class="resource-buttons">@@BTN@@</div></div>
+                <div class="chapter-item"><strong>5. Équations différentielles</strong><div class="resource-buttons">@@BTN@@</div></div>
+                <div class="chapter-item"><strong>6. Intégrales généralisées</strong><div class="resource-buttons">@@BTN@@</div></div>
+                <div class="chapter-item"><strong>7. Transformée de Laplace</strong><div class="resource-buttons">@@BTN@@</div></div>
+                <div class="chapter-item"><strong>8. Séries</strong><div class="resource-buttons">@@BTN@@</div></div>
+                <div class="chapter-item"><strong>9. Transformée en Z</strong><div class="resource-buttons">@@BTN@@</div></div>
+            </div></details>
+            <details><summary>📘 Deuxième année</summary><div style="margin-top:1rem;">
+                <div class="chapter-item"><strong>1. Matrices</strong><div class="resource-buttons">@@BTN@@</div></div>
+                <div class="chapter-item"><strong>2. Espaces vectoriels</strong><div class="resource-buttons">@@BTN@@</div></div>
+                <div class="chapter-item"><strong>3. Diagonalisation</strong><div class="resource-buttons">@@BTN@@</div></div>
+                <div class="chapter-item"><strong>4. Fonctions de deux variables</strong><div class="resource-buttons">@@BTN@@</div></div>
+                <div class="chapter-item"><strong>5. Intégrales doubles</strong><div class="resource-buttons">@@BTN@@</div></div>
+                <div class="chapter-item"><strong>6. Statistiques</strong><div class="resource-buttons">@@BTN@@</div></div>
+                <div class="chapter-item"><strong>7. Probabilités</strong><div class="resource-buttons">@@BTN@@</div></div>
+            </div></details>
+        </div>
+
+        <div class="card" style="text-align: center;"><p><i class="fas fa-database"></i> Remplacez les `#` par vos liens réels.</p>
+        <a href="pdfs/referentiel-maths-bts-2024.pdf" class="btn" target="_blank">📄 Télécharger le référentiel officiel</a></div>
+    </section>
+
+    <!-- ========== SECTION PROGRAMME LYCÉE – BAC MAROC ========== -->
+    <section id="lycee" style="background: var(--gray-light); border-radius: 3rem; padding: 3rem 1.5rem; margin: 2rem 0;">
+        <h2 class="section-title">🎓 <span>Programme Lycée</span> – Bac Maroc</h2>
+        <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem auto;">Programmes officiels des mathématiques pour le baccalauréat marocain. Chaque chapitre propose des liens vers cours PDF, énoncés, corrigés et vidéos.</p>
+        <div style="display: flex; justify-content: center; gap: 0.8rem; flex-wrap: wrap; margin-bottom: 2rem;">
+            <a href="#tcs" class="btn" style="background: var(--primary);">📘 TCS</a>
+            <a href="#1bac-pc" class="btn" style="background: var(--primary);">📗 1ère PC/SVT</a>
+            <a href="#1bac-sm" class="btn" style="background: var(--primary);">📕 1ère SM</a>
+            <a href="#2bac-pc" class="btn" style="background: var(--primary);">📙 2ème PC/SVT</a>
+            <a href="#2bac-sm" class="btn" style="background: var(--primary);">📔 2ème SM</a>
+        </div>
+
+        <!-- TCS -->
+        <div id="tcs" class="card" data-aos="fade-up" style="margin-bottom: 2rem;">
+            <h3 style="color: var(--secondary);"><i class="fas fa-flask"></i> Tronc Commun Scientifique (TCS)</h3>
+            <details><summary>📖 Programme complet</summary><div style="margin-top:1rem;">
+                <div class="chapter-item"><strong>1. Arithmétique dans ℕ</strong><div class="resource-buttons">@@BTN@@</div></div>
+                <div class="chapter-item"><strong>2. Ensembles de nombres (ℕ,ℤ,𝔻,ℚ,ℝ)</strong><div class="resource-buttons">@@BTN@@</div></div>
+                <div class="chapter-item"><strong>3. Ordre dans ℝ</strong><div class="resource-buttons">@@BTN@@</div></div>
+                <div class="chapter-item"><strong>4. Polynômes</strong><div class="resource-buttons">@@BTN@@</div></div>
+                <div class="chapter-item"><strong>5. Équations, inéquations, systèmes</strong><div class="resource-buttons">@@BTN@@</div></div>
+                <div class="chapter-item"><strong>6. Calcul vectoriel dans le plan</strong><div class="resource-buttons">@@BTN@@</div></div>
+                <div class="chapter-item"><strong>7. Projection dans le plan</strong><div class="resource-buttons">@@BTN@@</div></div>
+                <div class="chapter-item"><strong>8. La droite dans le plan</strong><div class="resource-buttons">@@BTN@@</div></div>
+                <div class="chapter-item"><strong>9. Calcul trigonométrique</strong><div class="resource-buttons">@@BTN@@</div></div>
+                <div class="chapter-item"><strong>10. Généralités sur les fonctions</strong><div class="resource-buttons">@@BTN@@</div></div>
+                <div class="chapter-item"><strong>11. Transformations du plan</strong><div class="resource-buttons">@@BTN@@</div></div>
+                <div class="chapter-item"><strong>12. Produit scalaire dans le plan</strong><div class="resource-buttons">@@BTN@@</div></div>
+                <div class="chapter-item"><strong>13. Géométrie dans l'espace</strong><div class="resource-buttons">@@BTN@@</div></div>
+                <div class="chapter-item"><strong>14. Statistiques</strong><div class="resource-buttons">@@BTN@@</div></div>
+            </div></details>
+        </div>
+
+        <!-- 1ère PC/SVT -->
+        <div id="1bac-pc" class="card" data-aos="fade-up" style="margin-bottom: 2rem;">
+            <h3 style="color: var(--secondary);"><i class="fas fa-microscope"></i> 1ʳᵉ Bac – Sciences Expérimentales (PC / SVT)</h3>
+            <details><summary>📖 Programme complet</summary><div style="margin-top:1rem;">
+                <div class="chapter-item"><strong>1. Notions de logique</strong><div class="resource-buttons">@@BTN@@</div></div>
+                <div class="chapter-item"><strong>2. Généralités sur les fonctions</strong><div class="resource-buttons">@@BTN@@</div></div>
+                <div class="chapter-item"><strong>3. Barycentre dans le plan</strong><div class="resource-buttons">@@BTN@@</div></div>
+                <div class="chapter-item"><strong>4. Produit scalaire (étude analytique)</strong><div class="resource-buttons">@@BTN@@</div></div>
+                <div class="chapter-item"><strong>5. Calcul trigonométrique (transformation)</strong><div class="resource-buttons">@@BTN@@</div></div>
+                <div class="chapter-item"><strong>6. Suites numériques</strong><div class="resource-buttons">@@BTN@@</div></div>
+                <div class="chapter-item"><strong>7. Rotation dans le plan</strong><div class="resource-buttons">@@BTN@@</div></div>
+                <div class="chapter-item"><strong>8. Limites d'une fonction</strong><div class="resource-buttons">@@BTN@@</div></div>
+                <div class="chapter-item"><strong>9. Dérivation</strong><div class="resource-buttons">@@BTN@@</div></div>
+                <div class="chapter-item"><strong>10. Étude des fonctions</strong><div class="resource-buttons">@@BTN@@</div></div>
+                <div class="chapter-item"><strong>11. Vecteurs de l'espace</strong><div class="resource-buttons">@@BTN@@</div></div>
+                <div class="chapter-item"><strong>12. Géométrie dans l'espace</strong><div class="resource-buttons">@@BTN@@</div></div>
+                <div class="chapter-item"><strong>13. Dénombrement</strong><div class="resource-buttons">@@BTN@@</div></div>
+            </div></details>
+        </div>
+
+        <!-- 1ère SM -->
+        <div id="1bac-sm" class="card" data-aos="fade-up" style="margin-bottom: 2rem;">
+            <h3 style="color: var(--secondary);"><i class="fas fa-square-root-alt"></i> 1ʳᵉ Bac – Sciences Mathématiques (SM)</h3>
+            <details><summary>📖 Programme complet</summary><div style="margin-top:1rem;">
+                <div class="chapter-item"><strong>1. Logique</strong><div class="resource-buttons">@@BTN@@</div></div>
+                <div class="chapter-item"><strong>2. Ensembles et applications</strong><div class="resource-buttons">@@BTN@@</div></div>
+                <div class="chapter-item"><strong>3. Généralités sur les fonctions</strong><div class="resource-buttons">@@BTN@@</div></div>
+                <div class="chapter-item"><strong>4. Arithmétique dans ℤ</strong><div class="resource-buttons">@@BTN@@</div></div>
+                <div class="chapter-item"><strong>5. Barycentre</strong><div class="resource-buttons">@@BTN@@</div></div>
+                <div class="chapter-item"><strong>6. Produit scalaire</strong><div class="resource-buttons">@@BTN@@</div></div>
+                <div class="chapter-item"><strong>7. Calcul trigonométrique</strong><div class="resource-buttons">@@BTN@@</div></div>
+                <div class="chapter-item"><strong>8. Suites numériques</strong><div class="resource-buttons">@@BTN@@</div></div>
+                <div class="chapter-item"><strong>9. Rotation</strong><div class="resource-buttons">@@BTN@@</div></div>
+                <div class="chapter-item"><strong>10. Limites</strong><div class="resource-buttons">@@BTN@@</div></div>
+                <div class="chapter-item"><strong>11. Dérivation</strong><div class="resource-buttons">@@BTN@@</div></div>
+                <div class="chapter-item"><strong>12. Étude de fonctions</strong><div class="resource-buttons">@@BTN@@</div></div>
+                <div class="chapter-item"><strong>13. Dénombrement</strong><div class="resource-buttons">@@BTN@@</div></div>
+                <div class="chapter-item"><strong>14. Vecteurs de l'espace</strong><div class="resource-buttons">@@BTN@@</div></div>
+                <div class="chapter-item"><strong>15. Produit vectoriel</strong><div class="resource-buttons">@@BTN@@</div></div>
+            </div></details>
+        </div>
+
+        <!-- 2ème PC/SVT -->
+        <div id="2bac-pc" class="card" data-aos="fade-up" style="margin-bottom: 2rem;">
+            <h3 style="color: var(--secondary);"><i class="fas fa-chart-line"></i> 2ème Bac – Sciences Expérimentales (PC / SVT)</h3>
+            <details><summary>📖 Programme complet</summary><div style="margin-top:1rem;">
+                <div class="chapter-item"><strong>1. Limites et continuité</strong><div class="resource-buttons">@@BTN@@</div></div>
+                <div class="chapter-item"><strong>2. Dérivation et étude de fonctions</strong><div class="resource-buttons">@@BTN@@</div></div>
+                <div class="chapter-item"><strong>3. Suites</strong><div class="resource-buttons">@@BTN@@</div></div>
+                <div class="chapter-item"><strong>4. Logarithmes</strong><div class="resource-buttons">@@BTN@@</div></div>
+                <div class="chapter-item"><strong>5. Exponentielles</strong><div class="resource-buttons">@@BTN@@</div></div>
+                <div class="chapter-item"><strong>6. Nombres complexes (partie 1 & 2)</strong><div class="resource-buttons">@@BTN@@</div></div>
+                <div class="chapter-item"><strong>7. Équations différentielles</strong><div class="resource-buttons">@@BTN@@</div></div>
+                <div class="chapter-item"><strong>8. Calcul intégral</strong><div class="resource-buttons">@@BTN@@</div></div>
+                <div class="chapter-item"><strong>9. Géométrie dans l'espace</strong><div class="resource-buttons">@@BTN@@</div></div>
+                <div class="chapter-item"><strong>10. Probabilités</strong><div class="resource-buttons">@@BTN@@</div></div>
+            </div></details>
+        </div>
+
+        <!-- 2ème SM -->
+        <div id="2bac-sm" class="card" data-aos="fade-up" style="margin-bottom: 2rem;">
+            <h3 style="color: var(--secondary);"><i class="fas fa-infinity"></i> 2ème Bac – Sciences Mathématiques (SM)</h3>
+            <details><summary>📖 Programme complet</summary><div style="margin-top:1rem;">
+                <div class="chapter-item"><strong>1. Limites et continuité</strong><div class="resource-buttons">@@BTN@@</div></div>
+                <div class="chapter-item"><strong>2. Suites</strong><div class="resource-buttons">@@BTN@@</div></div>
+                <div class="chapter-item"><strong>3. Continuité sur intervalle, dérivabilité</strong><div class="resource-buttons">@@BTN@@</div></div>
+                <div class="chapter-item"><strong>4. Étude de fonctions (branches infinies, concavité)</strong><div class="resource-buttons">@@BTN@@</div></div>
+                <div class="chapter-item"><strong>5. Logarithmes</strong><div class="resource-buttons">@@BTN@@</div></div>
+                <div class="chapter-item"><strong>6. Exponentielles</strong><div class="resource-buttons">@@BTN@@</div></div>
+                <div class="chapter-item"><strong>7. Nombres complexes</strong><div class="resource-buttons">@@BTN@@</div></div>
+                <div class="chapter-item"><strong>8. Arithmétique (Bézout, Gauss, Fermat)</strong><div class="resource-buttons">@@BTN@@</div></div>
+                <div class="chapter-item"><strong>9. Structures algébriques</strong><div class="resource-buttons">@@BTN@@</div></div>
+                <div class="chapter-item"><strong>10. Calcul intégral</strong><div class="resource-buttons">@@BTN@@</div></div>
+                <div class="chapter-item"><strong>11. Équations différentielles</strong><div class="resource-buttons">@@BTN@@</div></div>
+                <div class="chapter-item"><strong>12. Géométrie dans l'espace</strong><div class="resource-buttons">@@BTN@@</div></div>
+                <div class="chapter-item"><strong>13. Probabilités</strong><div class="resource-buttons">@@BTN@@</div></div>
+            </div></details>
+        </div>
+        <div class="card" style="text-align: center;"><p><i class="fas fa-database"></i> Remplacez `@@BTN@@` par les boutons complets.</p></div>
+    </section>
+
+    <!-- Annales Bac -->
+    <section id="annales">
+        <h2 class="section-title">📄 <span>Annales du Bac Maroc</span></h2>
+        <div class="grid">
+            <div class="card"><i class="fas fa-calendar-alt"></i><h3>Session 2025</h3><p>Sujets SM & SVT</p><a href="#" class="btn" target="_blank">Bientôt</a></div>
+            <div class="card"><i class="fas fa-file-alt"></i><h3>Session 2024</h3><p>Toutes filières + corrigés</p><a href="#" class="btn" target="_blank">Sur demande</a></div>
         </div>
     </section>
 
+    <!-- Quiz -->
+    <section id="astuces">
+        <h2 class="section-title">🧠 <span>Quiz mathématique</span> – Score dynamique</h2>
+        <div class="quiz-container" id="mathQuiz">
+            <div id="quizQuestion">Question : Quelle est la dérivée de ln(2x) ?</div>
+            <div style="display: flex; gap: 1rem; margin: 1rem 0; flex-wrap:wrap;">
+                <button class="btn" data-answer="2/x">A) 2/x</button>
+                <button class="btn" data-answer="1/x">B) 1/x</button>
+                <button class="btn" data-answer="2x">C) 2x</button>
+            </div>
+            <div id="quizFeedback"></div>
+            <div id="quizScore">Score : <span id="quizScoreValue">0</span> / 1</div>
+        </div>
+    </section>
+
+    <!-- Bibliothèque PDF -->
     <section id="pdfs">
-        <h2><i class="fas fa-file-pdf"></i> Bibliothèque Numérique</h2>
-        <a href="pdfs/cours-maths-financieres-bts.pdf" class="pdf-item" target="_blank">
-            <span><i class="far fa-file-pdf"></i> Maths Financières - BTS CG</span>
-            <i class="fas fa-download"></i>
-        </a>
-        <a href="pdfs/algebre-lineaire-DSI.pdf" class="pdf-item" target="_blank">
-            <span><i class="far fa-file-pdf"></i> Algèbre Linéaire - BTS DSI</span>
-            <i class="fas fa-download"></i>
-        </a>
-        <a href="pdfs/annales-bac-maths-maroc.pdf" class="pdf-item" target="_blank">
-            <span><i class="far fa-file-pdf"></i> Annales Bac (Dernières sessions)</span>
-            <i class="fas fa-download"></i>
-        </a>
+        <h2 class="section-title">📁 <span>Bibliothèque PDF</span></h2>
+        <div class="search-box">
+            <input type="text" id="pdfSearch" placeholder="🔍 Rechercher un PDF..." onkeyup="filterPDFs()">
+        </div>
+        <div class="pdf-list" id="pdfList">
+            <a href="pdfs/cours-maths-financieres.pdf" class="pdf-item" data-title="maths financières bts cg" target="_blank"><span><i class="far fa-file-pdf"></i> Maths financières – BTS CG</span> <i class="fas fa-download"></i></a>
+            <a href="pdfs/algebre-lineaire.pdf" class="pdf-item" data-title="algèbre linéaire dsi" target="_blank"><span><i class="far fa-file-pdf"></i> Algèbre linéaire – BTS DSI</span> <i class="fas fa-download"></i></a>
+            <a href="pdfs/annales-bac-2024.pdf" class="pdf-item" data-title="annales bac 2024" target="_blank"><span><i class="far fa-file-pdf"></i> Annales Bac 2024 corrigées</span> <i class="fas fa-download"></i></a>
+            <a href="pdfs/referentiel-maths-bts-2024.pdf" class="pdf-item" data-title="référentiel officiel bts 2024" target="_blank"><span><i class="far fa-file-pdf"></i> 📖 Référentiel national BTS (2024)</span> <i class="fas fa-download"></i></a>
+        </div>
     </section>
 
+    <!-- Packs -->
+    <section id="packs">
+        <h2 class="section-title">💰 <span>Tarifs réels</span> (2026)</h2>
+        <div class="grid">
+            <div class="card"><h3>Pack Essentiel</h3><p>Accès PDF + annales</p><div class="counter" style="font-size:1.8rem;">199 DH</div><a href="https://wa.me/212610864319" class="btn" target="_blank">Commander</a></div>
+            <div class="card"><h3>Pack Intensif <span class="badge-new">Populaire</span></h3><p>Cours + correction perso</p><div class="counter" style="font-size:1.8rem;">399 DH</div><a href="https://wa.me/212610864319" class="btn" target="_blank">Réserver</a></div>
+            <div class="card"><h3>Pack Premium</h3><p>Suivi WhatsApp illimité</p><div class="counter" style="font-size:1.8rem;">699 DH</div><a href="https://wa.me/212610864319" class="btn" target="_blank">Devenir Premium</a></div>
+        </div>
+    </section>
+
+    <!-- Vidéos -->
+    <section id="videos">
+        <h2 class="section-title">🎬 <span>Vidéos YouTube</span></h2>
+        <div class="grid">
+            <div class="card"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" loading="lazy" allowfullscreen></iframe></div><h3>Limites et continuité</h3></div>
+            <div class="card"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" loading="lazy" allowfullscreen></iframe></div><h3>Nombres complexes</h3></div>
+        </div>
+        <div class="text-center" style="text-align:center;"><a href="https://www.youtube.com/@votre-chaine" class="btn" target="_blank">📺 Voir toutes les vidéos</a></div>
+    </section>
+
+    <!-- Avis -->
+    <section id="avis">
+        <h2 class="section-title">⭐ <span>Avis élèves</span></h2>
+        <div class="grid">
+            <div class="testimonial-card"><i class="fas fa-quote-left"></i> "16/20 au bac !" – Amine</div>
+            <div class="testimonial-card"><i class="fas fa-quote-left"></i> "Suivi top, cours clairs." – Sara</div>
+            <div class="testimonial-card"><i class="fas fa-quote-left"></i> "Professeur agrégé, excellent." – Yassine</div>
+        </div>
+    </section>
+
+    <!-- Contact -->
     <section id="contact">
-        <h2><i class="fas fa-envelope"></i> Un besoin spécifique ?</h2>
-        <p>Besoin de coaching personnalisé ou de supports supplémentaires ?</p>
-        <div class="cta" style="text-align: center;">
-            <a href="https://wa.me/2126XXXXXXXX"><i class="fab fa-whatsapp"></i> Contact direct via WhatsApp</a>
+        <h2 class="section-title">📩 <span>Contact</span></h2>
+        <div style="max-width: 600px; margin:0 auto;">
+            <p><i class="fab fa-whatsapp"></i> <strong>WhatsApp :</strong> <a href="https://wa.me/212610864319" target="_blank">+212 6 1086 4319</a></p>
+            <p><i class="fas fa-envelope"></i> <strong>Email :</strong> fadilimostafa@gmail.com</p>
+            <form action="https://formsubmit.co/fadilimostafa@gmail.com" method="POST">
+                <div class="honeypot"><label for="website">Website</label><input type="text" name="website" id="website" autocomplete="off" tabindex="-1"></div>
+                <input type="hidden" name="_next" value="https://fadilimostafa07.github.io/mathematiques-maroc/merci.html">
+                <input type="hidden" name="_subject" value="Nouvelle demande de cours">
+                <input type="text" name="nom" placeholder="Nom complet" required style="width:100%; padding:0.8rem; margin:0.5rem 0; border-radius:50px; background:var(--white);">
+                <input type="tel" name="tel" placeholder="WhatsApp" required style="width:100%; padding:0.8rem; margin:0.5rem 0; border-radius:50px;">
+                <textarea name="message" rows="3" placeholder="Votre niveau et besoin" style="width:100%; padding:0.8rem; border-radius:1rem;"></textarea>
+                <input type="hidden" name="_captcha" value="false">
+                <button type="submit" class="btn" style="margin-top:1rem;">Envoyer</button>
+            </form>
         </div>
     </section>
 </main>
 
 <footer>
-    <p><strong>Bac Maths Maroc</strong> - Créé par Mostafa Fadili</p>
-    <div class="social-links">
-        <a href="#"><i class="fab fa-facebook"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="https://github.com/fadilimostafa07/mathematiques-maroc"><i class="fab fa-github"></i></a>
-    </div>
-    <p>© 2026 Tous droits réservés.</p>
+    <div><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a> <a href="#" target="_blank"><i class="fab fa-instagram"></i></a> <a href="https://github.com/fadilimostafa07" target="_blank"><i class="fab fa-github"></i></a> <a href="#" target="_blank"><i class="fab fa-youtube"></i></a></div>
+    <p>© 2026 Bac Maths Maroc – Mostafa Fadili, professeur agrégé de mathématiques</p>
+    <p><i class="fab fa-whatsapp"></i> +212 6 1086 4319 | fadilimostafa@gmail.com</p>
 </footer>
 
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({ duration: 800, once: true });
+    const toggle = document.getElementById('darkModeToggle');
+    toggle.addEventListener('click', () => { document.body.classList.toggle('dark'); localStorage.setItem('darkMode', document.body.classList.contains('dark')); });
+    if (localStorage.getItem('darkMode') === 'true') document.body.classList.add('dark');
+    const backBtn = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => { if (window.scrollY > 300) backBtn.classList.add('show'); else backBtn.classList.remove('show'); });
+    backBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    function animateCounter(id, start, end, duration) { const obj = document.getElementById(id); if (!obj) return; let current = start; const step = (end - start) / (duration / 30); const timer = setInterval(() => { current += step; if (current >= end) { obj.innerText = Math.floor(end); clearInterval(timer); } else { obj.innerText = Math.floor(current); } }, 30); }
+    animateCounter('studentCounter', 0, 128, 2000); animateCounter('successCounter', 0, 92, 2000);
+    let quizAnswered = false; const quizBtns = document.querySelectorAll('#mathQuiz .btn'); const feedback = document.getElementById('quizFeedback'); const scoreSpan = document.getElementById('quizScoreValue');
+    quizBtns.forEach(btn => { btn.addEventListener('click', function() { if (quizAnswered) return; const ans = this.getAttribute('data-answer'); if (ans === '1/x') { feedback.innerHTML = '<span style="color:#2ecc71;">✅ Bonne réponse !</span>'; scoreSpan.innerText = '1'; quizAnswered = true; } else { feedback.innerHTML = '<span style="color:#e74c3c;">❌ Incorrect, la bonne réponse est 1/x.</span>'; scoreSpan.innerText = '0'; quizAnswered = true; } }); });
+    window.filterPDFs = function() { const term = document.getElementById('pdfSearch').value.toLowerCase(); document.querySelectorAll('.pdf-item').forEach(item => { const title = item.getAttribute('data-title').toLowerCase(); item.style.display = title.includes(term) ? 'flex' : 'none'; }); };
+    // Remplacer @@BTN@@ par les vrais boutons (pour la section lycée)
+    document.querySelectorAll('#lycee .chapter-item .resource-buttons').forEach(el => { if(el.innerHTML.includes('@@BTN@@')) el.innerHTML = '<a href="#" class="btn btn-pdf" target="_blank">📄 Cours PDF</a> <a href="#" class="btn btn-exo" target="_blank">📝 Énoncés</a> <a href="#" class="btn btn-corrige" target="_blank">✅ Corrigés</a> <a href="#" class="btn btn-video" target="_blank">🎥 Vidéos</a>'; });
+    // Idem pour DIA et autres avec @@BTN@@
+    document.querySelectorAll('#referentiel .resource-buttons').forEach(el => { if(el.innerHTML.includes('@@BTN@@')) el.innerHTML = '<a href="#" class="btn btn-pdf" target="_blank">📄 Cours PDF</a> <a href="#" class="btn btn-exo" target="_blank">📝 Énoncés</a> <a href="#" class="btn btn-corrige" target="_blank">✅ Corrigés</a> <a href="#" class="btn btn-video" target="_blank">🎥 Vidéos</a>'; });
+</script>
 </body>
 </html>
