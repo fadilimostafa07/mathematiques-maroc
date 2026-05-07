@@ -2,15 +2,213 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Bac Maths Maroc</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Bac Maths Maroc + BTS & Astuces</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f4f7fc;
+            color: #1e2a3e;
+            line-height: 1.5;
+        }
+
+        header {
+            background: linear-gradient(135deg, #0b3b5f, #1b5a7a);
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+            border-bottom-left-radius: 2rem;
+            border-bottom-right-radius: 2rem;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        }
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        nav {
+            background-color: white;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 1rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        nav a {
+            text-decoration: none;
+            background: #eef2f5;
+            padding: 0.6rem 1.2rem;
+            border-radius: 40px;
+            color: #0b3b5f;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+        nav a:hover {
+            background: #1b5a7a;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        main {
+            max-width: 1300px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        section {
+            background: white;
+            border-radius: 2rem;
+            padding: 1.8rem;
+            margin-bottom: 2.5rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            transition: transform 0.2s;
+        }
+        section:hover {
+            transform: translateY(-3px);
+        }
+        h2 {
+            font-size: 1.8rem;
+            border-left: 6px solid #e67e22;
+            padding-left: 1rem;
+            margin-bottom: 1.5rem;
+            color: #0b3b5f;
+        }
+        h3 {
+            margin: 1rem 0 0.5rem;
+            color: #1b5a7a;
+        }
+
+        /* Grille BTS */
+        .bts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+        .bts-card {
+            background: #f9fafb;
+            border-radius: 1rem;
+            padding: 1.2rem;
+            border: 1px solid #e0e7ed;
+            transition: all 0.2s;
+        }
+        .bts-card:hover {
+            box-shadow: 0 8px 18px rgba(0,0,0,0.1);
+            border-color: #e67e22;
+        }
+        .bts-card h3 {
+            margin-top: 0;
+            color: #1b5a7a;
+        }
+        .bts-card a {
+            display: inline-block;
+            margin-top: 0.8rem;
+            color: #e67e22;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .bts-card a:hover {
+            text-decoration: underline;
+        }
+
+        /* PDF list */
+        .pdf-list {
+            list-style: none;
+            margin-top: 1rem;
+        }
+        .pdf-list li {
+            background: #f1f5f9;
+            margin: 0.8rem 0;
+            padding: 0.8rem 1rem;
+            border-radius: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            flex-wrap: wrap;
+        }
+        .pdf-list li a {
+            flex: 1;
+            text-decoration: none;
+            color: #0b3b5f;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .pdf-list li a:hover {
+            color: #e67e22;
+        }
+        .badge-pdf {
+            background: #e67e22;
+            color: white;
+            font-size: 0.7rem;
+            padding: 0.2rem 0.6rem;
+            border-radius: 20px;
+        }
+        .download-btn {
+            background: #1b5a7a;
+            color: white !important;
+            padding: 0.3rem 0.8rem;
+            border-radius: 30px;
+            font-size: 0.8rem;
+        }
+
+        .iframe-container {
+            background: #f0f2f5;
+            border-radius: 1rem;
+            overflow: hidden;
+            margin-top: 1rem;
+        }
+        iframe {
+            width: 100%;
+            height: 550px;
+            border: none;
+            background: white;
+        }
+
+        footer {
+            text-align: center;
+            background: #0b2b3b;
+            color: #cbd5e1;
+            padding: 2rem;
+            margin-top: 2rem;
+            border-top-left-radius: 2rem;
+            border-top-right-radius: 2rem;
+        }
+
+        @media (max-width: 700px) {
+            header h1 { font-size: 1.8rem; }
+            nav a { padding: 0.4rem 0.9rem; font-size: 0.9rem; }
+            h2 { font-size: 1.4rem; }
+            iframe { height: 400px; }
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+    </style>
+</head>
 <body>
 
 <header>
     <h1>📘 Bac Maths Maroc</h1>
-    <p>Plateforme de cours et exercices de mathématiques</p>
+    <p>Plateforme de cours, exercices, astuces & BTS</p>
 </header>
 
 <nav>
@@ -18,37 +216,172 @@
     <a href="#cours">Cours</a>
     <a href="#exercices">Exercices</a>
     <a href="#annales">Annales</a>
+    <a href="#astuces">Astuces & Quiz</a>
+    <a href="#bts">BTS Maroc</a>
+    <a href="#pdfs">Bibliothèque PDF</a>
     <a href="#contact">Contact</a>
 </nav>
 
-<section id="accueil">
-    <h2>Accueil</h2>
-    <p>Bienvenue sur ta plateforme de mathématiques pour le bac marocain.</p>
-</section>
+<main>
+    <!-- Section accueil existante -->
+    <section id="accueil">
+        <h2>🏠 Accueil</h2>
+        <p>Bienvenue sur ta plateforme complète de mathématiques : baccalauréat marocain (sciences maths, sc exp), filières BTS et exercices interactifs. Découvre les astuces, quiz, cours et annales.</p>
+    </section>
 
-<section id="cours">
-    <h2>Cours</h2>
-    <p>Les cours seront ajoutés progressivement.</p>
-</section>
+    <!-- Cours (à enrichir) -->
+    <section id="cours">
+        <h2>📚 Cours</h2>
+        <p>Les cours seront ajoutés progressivement. En attendant, explore la section <strong>Bibliothèque PDF</strong> pour télécharger des supports.</p>
+    </section>
 
-<section id="exercices">
-    <h2>Exercices</h2>
-    <p>Exercices corrigés bientôt disponibles.</p>
-</section>
+    <!-- Exercices -->
+    <section id="exercices">
+        <h2>✏️ Exercices</h2>
+        <p>Des exercices corrigés bientôt disponibles. Reviens régulièrement ou consulte les quiz dans la partie <strong>Astuces & Quiz</strong>.</p>
+    </section>
 
-<section id="annales">
-    <h2>Annales</h2>
-    <p>Anciennes épreuves du bac.</p>
-</section>
+    <!-- Annales -->
+    <section id="annales">
+        <h2>📄 Annales</h2>
+        <p>Anciennes épreuves du bac marocain (sessions 2020-2025) à venir. Prochainement en PDF.</p>
+    </section>
 
-<section id="contact">
-    <h2>Contact</h2>
-    <p>📞 WhatsApp : +212XXXXXXXXX</p>
-</section>
+    <!-- 1. Contenu mathematica.html depuis GitHub -->
+    <section id="astuces">
+        <h2>🧠 Astuces & Quiz Mathématiques</h2>
+        <div class="iframe-container">
+            <!-- 
+                Remplacez l'URL ci-dessous par l'URL RAW de votre fichier mathematica.html hébergé sur GitHub.
+                Utilisez https://htmlpreview.github.io/? ou raw.githack.com pour un affichage propre.
+                Exemple : 
+                <iframe src="https://htmlpreview.github.io/?https://raw.githubusercontent.com/votre-utilisateur/nom-repo/main/mathematica.html"></iframe>
+                ou bien : 
+                <iframe src="https://raw.githack.com/votre-utilisateur/nom-repo/main/mathematica.html"></iframe>
+            -->
+            <iframe src="https://htmlpreview.github.io/?https://raw.githubusercontent.com/ton-utilisateur/ton-repo/main/mathematica.html" 
+                    title="Astuces et quiz mathématiques"
+                    srcdoc="<html><body style='font-family:sans-serif;padding:2rem;text-align:center;'>⚠️ Le fichier mathematica.html n'est pas encore accessible. Veuillez configurer l'URL GitHub dans la balise iframe du code source.</body></html>">
+            </iframe>
+        </div>
+        <p><small>💡 Astuce : si le contenu ne s'affiche pas, vérifiez l'URL du fichier brut dans le code (remplacez <code>ton-utilisateur/ton-repo</code> par vos identifiants).</small></p>
+    </section>
+
+    <!-- 2. Section BTS Maroc -->
+    <section id="bts">
+        <h2>🇲🇦 Filières BTS au Maroc (Mathématiques appliquées)</h2>
+        <div class="bts-grid">
+            <div class="bts-card">
+                <h3>📊 BTS DSI (Développement Systèmes d'Information)</h3>
+                <p>Probabilités, statistiques, algorithmique, algèbre booléenne.</p>
+                <a href="#">🔗 Ressources DSI →</a>
+            </div>
+            <div class="bts-card">
+                <h3>💰 BTS CG (Comptabilité et Gestion)</h3>
+                <p>Mathématiques financières : intérêts composés, annuités, VAN, TRI.</p>
+                <a href="#">🔗 Cours financiers →</a>
+            </div>
+            <div class="bts-card">
+                <h3>🏗️ BTS Bâtiment</h3>
+                <p>Géométrie vectorielle, résistance des matériaux, calcul de structures.</p>
+                <a href="#">🔗 Exercices bâtiment →</a>
+            </div>
+            <div class="bts-card">
+                <h3>⚡ BTS Électrotechnique</h3>
+                <p>Nombres complexes, transformée de Laplace, fonctions périodiques.</p>
+                <a href="#">🔗 Cours électrotech →</a>
+            </div>
+            <div class="bts-card">
+                <h3>🌍 BTS Tourisme & Hôtellerie</h3>
+                <p>Statistiques descriptives, pourcentages, gestion de données.</p>
+                <a href="#">🔗 Études de cas →</a>
+            </div>
+            <div class="bts-card">
+                <h3>📈 BTS Management</h3>
+                <p>Analyse de données, probabilités, outils d'aide à la décision.</p>
+                <a href="#">🔗 Ressources management →</a>
+            </div>
+        </div>
+        <p style="margin-top: 1rem; font-style: italic;">📌 Les liens seront activés prochainement. Consultez la bibliothèque PDF pour des supports dédiés.</p>
+    </section>
+
+    <!-- 3. Espaces pour PDF de cours -->
+    <section id="pdfs">
+        <h2>📁 Bibliothèque de cours & examens (PDF)</h2>
+        <p>Cliquez sur un document pour le visualiser ou le télécharger.</p>
+        <ul class="pdf-list">
+            <!-- Remplacez les liens ci-dessous par vos propres URLs GitHub raw ou autres hébergements -->
+            <li>
+                <a href="https://raw.githack.com/ton-utilisateur/ton-repo/main/pdfs/cours-maths-financieres-bts.pdf" target="_blank">
+                    📘 Cours complet : Mathématiques financières (BTS CG)
+                </a>
+                <span class="badge-pdf">PDF</span>
+                <a href="#" class="download-btn" download>⬇️ Télécharger</a>
+            </li>
+            <li>
+                <a href="https://raw.githack.com/ton-utilisateur/ton-repo/main/pdfs/algebre-lineaire-DSI.pdf" target="_blank">
+                    📗 Algèbre linéaire & matrices - BTS DSI
+                </a>
+                <span class="badge-pdf">PDF</span>
+                <a href="#" class="download-btn" download>⬇️ Télécharger</a>
+            </li>
+            <li>
+                <a href="https://raw.githack.com/ton-utilisateur/ton-repo/main/pdfs/statistiques-bts.pdf" target="_blank">
+                    📙 Statistiques descriptives & probabilités (toutes filières)
+                </a>
+                <span class="badge-pdf">PDF</span>
+            </li>
+            <li>
+                <a href="https://raw.githack.com/ton-utilisateur/ton-repo/main/pdfs/exercices-nombres-complexes.pdf" target="_blank">
+                    📕 Nombres complexes (BTS Électrotechnique)
+                </a>
+                <span class="badge-pdf">PDF</span>
+            </li>
+            <li>
+                <a href="https://raw.githack.com/ton-utilisateur/ton-repo/main/pdfs/annales-bac-maths-maroc.pdf" target="_blank">
+                    📖 Annales bac maths Maroc (sessions récentes)
+                </a>
+                <span class="badge-pdf">PDF</span>
+            </li>
+        </ul>
+        <p><strong>💡 Comment ajouter vos propres PDF ?</strong> <br>
+        - Déposez vos fichiers dans un dossier <code>pdfs/</code> sur votre dépôt GitHub.<br>
+        - Utilisez l'URL de type <code>https://raw.githack.com/votre-utilisateur/votre-repo/main/pdfs/nomfichier.pdf</code> pour visualisation directe.<br>
+        - Modifiez le <code>href</code> des liens ci-dessus avec vos URLs réelles.
+        </p>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+        <h2>📞 Contact & Assistance</h2>
+        <div class="contact-info">
+            <p>📱 WhatsApp : +212 6XX XXX XXX (à renseigner)</p>
+            <p>📧 Email : contact@bacmathsmaroc.ma (exemple)</p>
+            <p>🌐 Dépôt GitHub : <a href="#" style="color:#e67e22;">Mettez votre lien ici</a></p>
+        </div>
+    </section>
+</main>
 
 <footer>
-    <p>© 2026 Bac Maths Maroc</p>
+    <p>© 2026 Bac Maths Maroc | Plateforme enrichie pour le bac, BTS, et ressources interactives</p>
+    <p style="margin-top: 0.5rem; font-size: 0.85rem;">✨ N’oubliez pas de configurer les URLs GitHub (iframe & PDF) pour activer tout le contenu.</p>
 </footer>
 
+<!-- Petit script pour dynamiser les boutons téléchargement (si besoin) -->
+<script>
+    // Aide : pour que les liens "télécharger" fonctionnent avec l'attribut download,
+    // il faut que le fichier soit sur le même domaine ou via un service qui autorise le CORS.
+    // En attendant, les liens ouvrent le PDF. Vous pouvez adapter manuellement.
+    document.querySelectorAll('.download-btn').forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            const parentLink = this.previousElementSibling?.href || this.parentElement.querySelector('a')?.href;
+            if(parentLink && parentLink.includes('raw.githack.com')) {
+                // Ouvre dans un nouvel onglet (téléchargement possible via le navigateur)
+                window.open(parentLink, '_blank');
+                e.preventDefault();
+            }
+        });
+    });
+</script>
 </body>
 </html>
