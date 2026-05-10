@@ -5,477 +5,312 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="description" content="Cours particuliers de mathématiques pour le Bac Maroc (SM, PC, SVT) et BTS. Méthodes simples, exercices ciblés, accompagnement WhatsApp. Professeur agrégé Mostafa Fadili.">
   <meta name="keywords" content="Bac Maths Maroc, Sciences Maths, examen national, cours maths maroc, BTS Maroc, professeur agrégé">
+  <meta name="author" content="Mostafa Fadili">
+  <meta name="theme-color" content="#1a3a8f">
   <title>Bac Maths Maroc – Cours & Réussite | Professeur agrégé Mostafa Fadili</title>
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    :root {
-      --bg: #f5f7ff;
-      --bg2: #eef0fb;
-      --white: #ffffff;
-      --primary: #1a3a8f;
-      --primary2: #254eb8;
-      --accent: #e8a020;
-      --accent2: #f5b93e;
-      --green: #1eaf7a;
-      --red: #e0404a;
-      --teal: #0891b2;
-      --text: #1a1f36;
-      --text-dim: #5a6380;
-      --border: #dde1f0;
-      --shadow: 0 4px 24px rgba(26,58,143,0.10);
-      --shadow-lg: 0 8px 40px rgba(26,58,143,0.15);
-      --radius: 14px;
-      --font: 'Sora', sans-serif;
-    }
-    body.dark {
-      --bg: #121826;
-      --bg2: #1e2432;
-      --white: #1e2432;
-      --primary: #2c4c9e;
-      --primary2: #3a5cb0;
-      --text: #eef2f5;
-      --text-dim: #a0a8c0;
-      --border: #2a3440;
-    }
-    body { background: var(--bg); color: var(--text); font-family: var(--font); font-size: 15px; line-height: 1.6; transition: background 0.3s, color 0.2s; }
-    .container { max-width: 1200px; margin: 0 auto; padding: 0 5%; }
-    .tag { display: inline-block; font-size: .68rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; padding: 4px 12px; border-radius: 100px; }
-    .tag-primary { background: rgba(26,58,143,.1); color: var(--primary); }
-    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px; border-radius: 10px; font-weight: 700; font-size: .85rem; cursor: pointer; transition: .2s; border: none; font-family: var(--font); }
-    .btn-primary { background: var(--primary); color: white; }
-    .btn-primary:hover { background: var(--primary2); transform: translateY(-2px); }
-    .btn-accent { background: var(--accent); color: var(--primary); }
-    .btn-outline-light { background: rgba(255,255,255,.2); color: white; border: 1px solid rgba(255,255,255,.3); }
-    .btn-outline { background: none; border: 1.5px solid var(--primary); color: var(--primary); }
-    .resource-buttons { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 0.5rem; }
-    .res-btn { display: inline-block; padding: 5px 12px; border-radius: 30px; font-size: 0.7rem; font-weight: 700; color: white; text-decoration: none; transition: 0.2s; }
-    .res-pdf { background: #3498db; }
-    .res-exo { background: #2ecc71; }
-    .res-cor { background: #e67e22; }
-    .res-vid { background: #e74c3c; }
-    .res-btn:hover { opacity: 0.85; transform: translateY(-1px); }
-    .chapter-item { margin-bottom: 1.2rem; padding: 0.8rem; background: var(--white); border-radius: 1rem; border-left: 4px solid var(--accent); }
-    details summary { cursor: pointer; font-weight: 700; padding: 0.5rem 0; color: var(--primary); }
-    details summary:hover { color: var(--accent); }
-    .toast { position: fixed; bottom: 2rem; right: 2rem; background: var(--primary); color: white; padding: 12px 20px; border-radius: 12px; opacity: 0; transition: .3s; z-index: 1000; }
-    .toast.show { opacity: 1; transform: translateY(0); }
-    .whatsapp-float { position: fixed; bottom: 20px; right: 20px; background: #25d366; width: 55px; height: 55px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; color: white; box-shadow: 0 2px 10px rgba(0,0,0,0.2); z-index: 999; transition: .2s; }
-    .whatsapp-float:hover { transform: scale(1.05); }
-    .theme-switch { position: fixed; bottom: 90px; right: 20px; background: var(--accent); width: 45px; height: 45px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; color: var(--primary); z-index: 1000; }
-    .back-to-top { position: fixed; bottom: 20px; left: 20px; background: var(--primary); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; opacity: 0; transition: .2s; z-index: 998; color: white; }
-    .back-to-top.show { opacity: 1; }
-    header { background: var(--primary); color: white; padding: 16px 5%; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 200; }
-    .logo { display: flex; align-items: center; gap: 10px; font-size: 1.2rem; font-weight: 800; }
-    .logo-icon { width: 36px; height: 36px; background: var(--accent); border-radius: 9px; display: flex; align-items: center; justify-content: center; font-weight: 900; color: var(--primary); }
-    .nav-links { display: flex; gap: 0.5rem; }
-    .nav-links a { color: rgba(255,255,255,.8); padding: 7px 13px; border-radius: 8px; font-size: .83rem; font-weight: 600; text-decoration: none; transition: .2s; }
-    .nav-links a:hover, .nav-links a.active { background: rgba(255,255,255,.15); color: white; }
-    .hamburger { display: none; background: none; border: none; cursor: pointer; flex-direction: column; gap: 5px; }
-    .hamburger span { width: 22px; height: 2px; background: white; border-radius: 2px; }
-    section { padding: 70px 0; }
-    .section-title { text-align: center; font-size: 1.8rem; color: var(--primary); margin-bottom: 2rem; }
-    .stats-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; text-align: center; margin-bottom: 3rem; }
-    .stat-card { background: var(--white); border-radius: var(--radius); padding: 1.5rem; min-width: 140px; }
-    .stat-number { font-size: 2.5rem; font-weight: 800; color: var(--accent); }
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
-    .card { background: var(--white); border-radius: var(--radius); padding: 1.5rem; box-shadow: var(--shadow); border: 1px solid var(--border); transition: 0.2s; }
-    .card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
-    .testimonial-card { background: var(--white); border-radius: var(--radius); padding: 1.2rem; border-left: 4px solid var(--accent); }
-    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
-    .contact-item { padding: 1rem; background: var(--white); border-radius: var(--radius); margin-bottom: 1rem; }
-    form input, form textarea { width: 100%; padding: 10px; margin-bottom: 1rem; border-radius: 8px; border: 1px solid var(--border); background: var(--white); color: var(--text); }
-    footer { background: var(--primary); color: rgba(255,255,255,.7); padding: 2rem; text-align: center; margin-top: 2rem; }
-    @media (max-width: 768px) {
-      .hamburger { display: flex; }
-      .nav-links { display: none; flex-direction: column; position: absolute; top: 70px; left: 0; right: 0; background: var(--primary); padding: 1rem; gap: 0.8rem; z-index: 199; }
-      .nav-links.open { display: flex; }
-      .contact-grid { grid-template-columns: 1fr; }
-      .stats-row { gap: 1rem; }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <!-- Éléments flottants -->
-<a href="https://wa.me/212610864319" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
-<div class="theme-switch" id="darkModeToggle"><i class="fas fa-moon"></i></div>
-<div class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></div>
+<a href="https://wa.me/212610864319" class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+<button class="theme-switch" id="darkModeToggle" aria-label="Mode sombre"><i class="fas fa-moon"></i></button>
+<button class="back-to-top" id="backToTop" aria-label="Retour en haut"><i class="fas fa-arrow-up"></i></button>
 
 <!-- HEADER -->
 <header>
   <div class="logo"><div class="logo-icon">M</div>Bac <span style="color:var(--accent2);">Maths</span> Maroc</div>
-  <button class="hamburger" id="hamburgerBtn"><span></span><span></span><span></span></button>
-  <div class="nav-links" id="navLinks">
+  <button class="hamburger" id="hamburgerBtn" aria-label="Menu"><span></span><span></span><span></span></button>
+  <nav class="nav-links" id="navLinks">
     <a href="#hero">Accueil</a>
     <a href="#cours">Cours</a>
     <a href="#bts">BTS</a>
     <a href="#lycee">Lycée</a>
     <a href="#avis">Avis</a>
     <a href="#contact">Contact</a>
-  </div>
+  </nav>
 </header>
 
 <!-- HERO -->
-<section id="hero" style="background: linear-gradient(135deg, var(--primary), var(--primary2)); color: white; text-align: center; padding: 70px 0;">
+<section id="hero" class="hero">
   <div class="container">
-    <h1 style="font-size: 2.2rem;">Mostafa Fadili – <span style="color:var(--accent2);">Professeur Agrégé</span></h1>
-    <p style="margin: 1rem auto; max-width: 600px;">+8 ans d'expérience · Méthodes simples · Exercices ciblés · Accompagnement WhatsApp</p>
-    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+    <span class="tag tag-accent" data-aos="fade-down">Professeur agrégé</span>
+    <h1 data-aos="fade-up">Mostafa Fadili – <span class="highlight">Professeur Agrégé</span></h1>
+    <p class="hero-sub" data-aos="fade-up" data-aos-delay="100">+8 ans d'expérience · Méthodes simples · Exercices ciblés · Accompagnement WhatsApp</p>
+    <div class="hero-actions" data-aos="fade-up" data-aos-delay="200">
       <a href="#cours" class="btn btn-accent">📚 Voir les cours</a>
       <a href="#contact" class="btn btn-outline-light">📞 Contactez-moi</a>
     </div>
   </div>
 </section>
 
-<!-- COURS RAPIDES (panneaux à onglets - simplifié) -->
-<section id="cours">
+<!-- COURS RAPIDES -->
+<section id="cours" class="section">
   <div class="container">
-    <h2 class="section-title">Cours par niveau</h2>
-    <div style="display:flex; gap:0.5rem; flex-wrap:wrap; justify-content:center; margin-bottom:2rem;">
-      <button class="btn btn-primary" onclick="showCoursPanel('tc')">Tronc Commun</button>
-      <button class="btn btn-primary" onclick="showCoursPanel('1bac')">1ère Bac</button>
-      <button class="btn btn-primary" onclick="showCoursPanel('2bac')">2ème Bac SM</button>
-      <button class="btn btn-primary" onclick="showCoursPanel('sp')">2ème Bac SP/PC</button>
-      <button class="btn btn-primary" onclick="showCoursPanel('bts')">BTS</button>
+    <h2 class="section-title" data-aos="fade-up">Cours par niveau</h2>
+    <div class="tab-bar" data-aos="fade-up" data-aos-delay="50">
+      <button class="tab-btn active" data-panel="tc">Tronc Commun</button>
+      <button class="tab-btn" data-panel="1bac">1ère Bac</button>
+      <button class="tab-btn" data-panel="2bac">2ème Bac SM</button>
+      <button class="tab-btn" data-panel="sp">2ème Bac SP</button>
+      <button class="tab-btn" data-panel="bts">BTS</button>
     </div>
     <div id="coursPanels">
-      <div id="panel-tc" class="cours-panel active"><div class="grid">@@TC_CARDS@@</div></div>
-      <div id="panel-1bac" class="cours-panel" style="display:none;"><div class="grid">@@1BAC_CARDS@@</div></div>
-      <div id="panel-2bac" class="cours-panel" style="display:none;"><div class="grid">@@2BAC_CARDS@@</div></div>
-      <div id="panel-sp" class="cours-panel" style="display:none;"><div class="grid">@@SP_CARDS@@</div></div>
-      <div id="panel-bts" class="cours-panel" style="display:none;"><div class="grid">@@BTS_CARDS@@</div></div>
+      <div id="panel-tc" class="cours-panel active"></div>
+      <div id="panel-1bac" class="cours-panel"></div>
+      <div id="panel-2bac" class="cours-panel"></div>
+      <div id="panel-sp" class="cours-panel"></div>
+      <div id="panel-bts" class="cours-panel"></div>
     </div>
   </div>
 </section>
 
 <!-- AVIS ÉLÈVES -->
-<section id="avis">
+<section id="avis" class="section section-alt">
   <div class="container">
-    <h2 class="section-title">⭐ Ils ont réussi avec moi</h2>
-    <div class="stats-row">
-      <div class="stat-card"><div class="stat-number">92%</div><div>Réussite au bac</div></div>
-      <div class="stat-card"><div class="stat-number">85%</div><div>Mentions</div></div>
-      <div class="stat-card"><div class="stat-number">128</div><div>Élèves accompagnés</div></div>
-      <div class="stat-card"><div class="stat-number">4.9/5</div><div>Note moyenne</div></div>
+    <h2 class="section-title" data-aos="fade-up">⭐ Ils ont réussi avec moi</h2>
+    <div class="stats-row" data-aos="fade-up">
+      <div class="stat-card"><div class="stat-number">92%</div><div class="stat-label">Réussite au bac</div></div>
+      <div class="stat-card"><div class="stat-number">85%</div><div class="stat-label">Mentions</div></div>
+      <div class="stat-card"><div class="stat-number">128</div><div class="stat-label">Élèves accompagnés</div></div>
+      <div class="stat-card"><div class="stat-number">4.9/5</div><div class="stat-label">Note moyenne</div></div>
     </div>
-    <div class="grid">
-      <div class="testimonial-card"><i class="fas fa-quote-left"></i> "Excellent professeur, j'ai eu 18/20 en maths SM !" – Yassine, bac SM</div>
-      <div class="testimonial-card"><i class="fas fa-quote-left"></i> "Suivi personnalisé, explications claires, mention TB." – Sara, bac PC</div>
-      <div class="testimonial-card"><i class="fas fa-quote-left"></i> "Les cours m'ont sauvé en probabilités. Je recommande !" – Amine, BTS CG</div>
+    <div class="grid grid-3" data-aos="fade-up" data-aos-delay="100">
+      <div class="testimonial-card"><i class="fas fa-quote-left quote-icon"></i> "Excellent professeur, j'ai eu 18/20 en maths SM !" <span class="testimonial-author">– Yassine, bac SM</span></div>
+      <div class="testimonial-card"><i class="fas fa-quote-left quote-icon"></i> "Suivi personnalisé, explications claires, mention TB." <span class="testimonial-author">– Sara, bac PC</span></div>
+      <div class="testimonial-card"><i class="fas fa-quote-left quote-icon"></i> "Les cours m'ont sauvé en probabilités. Je recommande !" <span class="testimonial-author">– Amine, BTS CG</span></div>
     </div>
   </div>
 </section>
 
-<!-- PROGRAMME LYCÉE DÉTAILLÉ (TOUS LES CHAPITRES) -->
-<section id="lycee">
+<!-- PROGRAMME LYCÉE -->
+<section id="lycee" class="section">
   <div class="container">
-    <h2 class="section-title">📖 Programme Lycée – Bac Maroc</h2>
-    <div class="grid">
-      <!-- Tronc Commun -->
-      <div class="card"><h3>Tronc Commun Scientifique (TCS) – 14 chapitres</h3>
-        <details><summary>Liste complète</summary>
-          <div class="chapter-item"><strong>1. Arithmétique dans ℕ</strong><div class="resource-buttons">@@BTN@@</div></div>
-          <div class="chapter-item"><strong>2. Ensembles de nombres (ℕ,ℤ,𝔻,ℚ,ℝ)</strong><div class="resource-buttons">@@BTN@@</div></div>
-          <div class="chapter-item"><strong>3. Ordre dans ℝ</strong><div class="resource-buttons">@@BTN@@</div></div>
-          <div class="chapter-item"><strong>4. Polynômes</strong><div class="resource-buttons">@@BTN@@</div></div>
-          <div class="chapter-item"><strong>5. Équations, inéquations et systèmes</strong><div class="resource-buttons">@@BTN@@</div></div>
-          <div class="chapter-item"><strong>6. Calcul vectoriel dans le plan</strong><div class="resource-buttons">@@BTN@@</div></div>
-          <div class="chapter-item"><strong>7. Projection dans le plan</strong><div class="resource-buttons">@@BTN@@</div></div>
-          <div class="chapter-item"><strong>8. La droite dans le plan</strong><div class="resource-buttons">@@BTN@@</div></div>
-          <div class="chapter-item"><strong>9. Calcul trigonométrique</strong><div class="resource-buttons">@@BTN@@</div></div>
-          <div class="chapter-item"><strong>10. Généralités sur les fonctions</strong><div class="resource-buttons">@@BTN@@</div></div>
-          <div class="chapter-item"><strong>11. Transformations du plan</strong><div class="resource-buttons">@@BTN@@</div></div>
-          <div class="chapter-item"><strong>12. Produit scalaire dans le plan</strong><div class="resource-buttons">@@BTN@@</div></div>
-          <div class="chapter-item"><strong>13. Géométrie dans l'espace</strong><div class="resource-buttons">@@BTN@@</div></div>
-          <div class="chapter-item"><strong>14. Statistiques</strong><div class="resource-buttons">@@BTN@@</div></div>
+    <h2 class="section-title" data-aos="fade-up">📖 Programme Lycée – Bac Maroc</h2>
+    <div class="grid grid-2" data-aos="fade-up">
+      <div class="card"><h3>Tronc Commun Scientifique (TCS – 14 chapitres)</h3>
+        <details><summary>Afficher la liste</summary>
+          <div class="chapter-item"><strong>1. Arithmétique dans ℕ</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>2. Ensembles de nombres (ℕ,ℤ,𝔻,ℚ,ℝ)</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>3. Ordre dans ℝ</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>4. Polynômes</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>5. Équations, inéquations et systèmes</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>6. Calcul vectoriel dans le plan</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>7. Projection dans le plan</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>8. La droite dans le plan</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>9. Calcul trigonométrique</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>10. Généralités sur les fonctions</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>11. Transformations du plan</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>12. Produit scalaire dans le plan</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>13. Géométrie dans l'espace</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>14. Statistiques</strong><div class="resource-buttons"></div></div>
         </details>
       </div>
-      <!-- 1ère Bac PC/SVT -->
-      <div class="card"><h3>1ʳᵉ Bac – Sciences Expérimentales (PC / SVT) – 13 chapitres</h3>
-        <details><summary>Liste complète</summary>
-          <div class="chapter-item"><strong>1. Notions de logique</strong><div class="resource-buttons">@@BTN@@</div></div>
-          <div class="chapter-item"><strong>2. Généralités sur les fonctions numériques</strong><div class="resource-buttons">@@BTN@@</div></div>
-          <div class="chapter-item"><strong>3. Barycentre dans le plan</strong><div class="resource-buttons">@@BTN@@</div></div>
-          <div class="chapter-item"><strong>4. Produit scalaire dans le plan (étude analytique)</strong><div class="resource-buttons">@@BTN@@</div></div>
-          <div class="chapter-item"><strong>5. Calcul trigonométrique (formules de transformation)</strong><div class="resource-buttons">@@BTN@@</div></div>
-          <div class="chapter-item"><strong>6. Suites numériques</strong><div class="resource-buttons">@@BTN@@</div></div>
-          <div class="chapter-item"><strong>7. Rotation dans le plan</strong><div class="resource-buttons">@@BTN@@</div></div>
-          <div class="chapter-item"><strong>8. Limites d'une fonction numérique</strong><div class="resource-buttons">@@BTN@@</div></div>
-          <div class="chapter-item"><strong>9. Dérivation</strong><div class="resource-buttons">@@BTN@@</div></div>
-          <div class="chapter-item"><strong>10. Étude des fonctions</strong><div class="resource-buttons">@@BTN@@</div></div>
-          <div class="chapter-item"><strong>11. Vecteurs de l'espace</strong><div class="resource-buttons">@@BTN@@</div></div>
-          <div class="chapter-item"><strong>12. Géométrie dans l'espace (positions relatives, orthogonalité)</strong><div class="resource-buttons">@@BTN@@</div></div>
-          <div class="chapter-item"><strong>13. Dénombrement</strong><div class="resource-buttons">@@BTN@@</div></div>
+      <div class="card"><h3>1ʳᵉ Bac – Sciences Exp. (PC / SVT – 13 chapitres)</h3>
+        <details><summary>Afficher la liste</summary>
+          <div class="chapter-item"><strong>1. Notions de logique</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>2. Généralités sur les fonctions numériques</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>3. Barycentre dans le plan</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>4. Produit scalaire dans le plan (étude analytique)</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>5. Calcul trigonométrique (formules de transformation)</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>6. Suites numériques</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>7. Rotation dans le plan</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>8. Limites d'une fonction numérique</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>9. Dérivation</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>10. Étude des fonctions</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>11. Vecteurs de l'espace</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>12. Géométrie dans l'espace (positions relatives, orthogonalité)</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>13. Dénombrement</strong><div class="resource-buttons"></div></div>
         </details>
       </div>
-      <!-- 1ère Bac SM -->
-      <div class="card"><h3>1ʳᵉ Bac – Sciences Mathématiques (SM) – 15 chapitres</h3>
-        <details><summary>Liste complète</summary>
-          <div class="chapter-item"><strong>1. Notions de logique</strong><div class="resource-buttons">@@BTN@@</div></div>
-          <div class="chapter-item"><strong>2. Ensembles et applications</strong><div class="resource-buttons">@@BTN@@</div></div>
-          <div class="chapter-item"><strong>3. Généralités sur les fonctions numériques</strong><div class="resource-buttons">@@BTN@@</div></div>
-          <div class="chapter-item"><strong>4. Arithmétique dans ℤ</strong><div class="resource-buttons">@@BTN@@</div></div>
-          <div class="chapter-item"><strong>5. Barycentre dans le plan</strong><div class="resource-buttons">@@BTN@@</div></div>
-          <div class="chapter-item"><strong>6. Produit scalaire dans le plan</strong><div class="resource-buttons">@@BTN@@</div></div>
-          <div class="chapter-item"><strong>7. Calcul trigonométrique</strong><div class="resource-buttons">@@BTN@@</div></div>
-          <div class="chapter-item"><strong>8. Suites numériques</strong><div class="resource-buttons">@@BTN@@</div></div>
-          <div class="chapter-item"><strong>9. Rotation dans le plan</strong><div class="resource-buttons">@@BTN@@</div></div>
-          <div class="chapter-item"><strong>10. Limites d'une fonction numérique</strong><div class="resource-buttons">@@BTN@@</div></div>
-          <div class="chapter-item"><strong>11. Dérivation</strong><div class="resource-buttons">@@BTN@@</div></div>
-          <div class="chapter-item"><strong>12. Étude des fonctions</strong><div class="resource-buttons">@@BTN@@</div></div>
-          <div class="chapter-item"><strong>13. Dénombrement</strong><div class="resource-buttons">@@BTN@@</div></div>
-          <div class="chapter-item"><strong>14. Vecteurs de l'espace</strong><div class="resource-buttons">@@BTN@@</div></div>
-          <div class="chapter-item"><strong>15. Produit vectoriel dans l'espace</strong><div class="resource-buttons">@@BTN@@</div></div>
+      <div class="card"><h3>1ʳᵉ Bac – Sciences Mathématiques (SM – 15 chapitres)</h3>
+        <details><summary>Afficher la liste</summary>
+          <div class="chapter-item"><strong>1. Notions de logique</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>2. Ensembles et applications</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>3. Généralités sur les fonctions numériques</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>4. Arithmétique dans ℤ</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>5. Barycentre dans le plan</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>6. Produit scalaire dans le plan</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>7. Calcul trigonométrique</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>8. Suites numériques</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>9. Rotation dans le plan</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>10. Limites d'une fonction numérique</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>11. Dérivation</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>12. Étude des fonctions</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>13. Dénombrement</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>14. Vecteurs de l'espace</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>15. Produit vectoriel dans l'espace</strong><div class="resource-buttons"></div></div>
         </details>
       </div>
-      <!-- 2ème Bac PC/SVT -->
-      <div class="card"><h3>2ème Bac – Sciences Expérimentales (PC / SVT) – 10 chapitres</h3>
-        <details><summary>Liste complète</summary>
-          <div class="chapter-item"><strong>1. Limites et continuité</strong><div class="resource-buttons">@@BTN@@</div></div>
-          <div class="chapter-item"><strong>2. Dérivation et étude de fonctions</strong><div class="resource-buttons">@@BTN@@</div></div>
-          <div class="chapter-item"><strong>3. Suites numériques</strong><div class="resource-buttons">@@BTN@@</div></div>
-          <div class="chapter-item"><strong>4. Fonctions logarithmes</strong><div class="resource-buttons">@@BTN@@</div></div>
-          <div class="chapter-item"><strong>5. Fonctions exponentielles</strong><div class="resource-buttons">@@BTN@@</div></div>
-          <div class="chapter-item"><strong>6. Nombres complexes (partie 1 et 2)</strong><div class="resource-buttons">@@BTN@@</div></div>
-          <div class="chapter-item"><strong>7. Équations différentielles</strong><div class="resource-buttons">@@BTN@@</div></div>
-          <div class="chapter-item"><strong>8. Calcul intégral</strong><div class="resource-buttons">@@BTN@@</div></div>
-          <div class="chapter-item"><strong>9. Géométrie dans l'espace (produit scalaire et vectoriel)</strong><div class="resource-buttons">@@BTN@@</div></div>
-          <div class="chapter-item"><strong>10. Probabilités</strong><div class="resource-buttons">@@BTN@@</div></div>
+      <div class="card"><h3>2ème Bac – Sciences Exp. (PC / SVT – 10 chapitres)</h3>
+        <details><summary>Afficher la liste</summary>
+          <div class="chapter-item"><strong>1. Limites et continuité</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>2. Dérivation et étude de fonctions</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>3. Suites numériques</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>4. Fonctions logarithmes</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>5. Fonctions exponentielles</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>6. Nombres complexes (partie 1 et 2)</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>7. Équations différentielles</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>8. Calcul intégral</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>9. Géométrie dans l'espace</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>10. Probabilités</strong><div class="resource-buttons"></div></div>
         </details>
       </div>
-      <!-- 2ème Bac SM -->
-      <div class="card"><h3>2ème Bac – Sciences Mathématiques (SM) – 13 chapitres</h3>
-        <details><summary>Liste complète</summary>
-          <div class="chapter-item"><strong>1. Limites et continuité</strong><div class="resource-buttons">@@BTN@@</div></div>
-          <div class="chapter-item"><strong>2. Suites numériques</strong><div class="resource-buttons">@@BTN@@</div></div>
-          <div class="chapter-item"><strong>3. Continuité sur un intervalle et fonctions dérivables</strong><div class="resource-buttons">@@BTN@@</div></div>
-          <div class="chapter-item"><strong>4. Étude des fonctions (branches infinies, concavité)</strong><div class="resource-buttons">@@BTN@@</div></div>
-          <div class="chapter-item"><strong>5. Fonctions logarithmes</strong><div class="resource-buttons">@@BTN@@</div></div>
-          <div class="chapter-item"><strong>6. Fonctions exponentielles</strong><div class="resource-buttons">@@BTN@@</div></div>
-          <div class="chapter-item"><strong>7. Nombres complexes</strong><div class="resource-buttons">@@BTN@@</div></div>
-          <div class="chapter-item"><strong>8. Arithmétique (Bézout, Gauss, Fermat)</strong><div class="resource-buttons">@@BTN@@</div></div>
-          <div class="chapter-item"><strong>9. Structures algébriques (lois internes, groupes, anneaux, corps)</strong><div class="resource-buttons">@@BTN@@</div></div>
-          <div class="chapter-item"><strong>10. Calcul intégral</strong><div class="resource-buttons">@@BTN@@</div></div>
-          <div class="chapter-item"><strong>11. Équations différentielles</strong><div class="resource-buttons">@@BTN@@</div></div>
-          <div class="chapter-item"><strong>12. Géométrie dans l'espace (produit scalaire et vectoriel)</strong><div class="resource-buttons">@@BTN@@</div></div>
-          <div class="chapter-item"><strong>13. Probabilités</strong><div class="resource-buttons">@@BTN@@</div></div>
+      <div class="card"><h3>2ème Bac – Sciences Mathématiques (SM – 13 chapitres)</h3>
+        <details><summary>Afficher la liste</summary>
+          <div class="chapter-item"><strong>1. Limites et continuité</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>2. Suites numériques</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>3. Continuité sur un intervalle et fonctions dérivables</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>4. Étude des fonctions (branches infinies, concavité)</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>5. Fonctions logarithmes</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>6. Fonctions exponentielles</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>7. Nombres complexes</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>8. Arithmétique (Bézout, Gauss, Fermat)</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>9. Structures algébriques</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>10. Calcul intégral</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>11. Équations différentielles</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>12. Géométrie dans l'espace</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>13. Probabilités</strong><div class="resource-buttons"></div></div>
         </details>
       </div>
     </div>
   </div>
 </section>
 
-<!-- RÉFÉRENTIEL BTS DÉTAILLÉ (TOUS LES CHAPITRES) -->
-<section id="bts">
+<!-- BTS -->
+<section id="bts" class="section section-alt">
   <div class="container">
-    <h2 class="section-title">📘 Référentiel BTS – Mathématiques (avril 2024)</h2>
-    <div style="display:flex; gap:1rem; flex-wrap:wrap; justify-content:center; margin-bottom:2rem;">
-      <button class="btn btn-primary" onclick="document.getElementById('bts-sri').scrollIntoView({behavior:'smooth'})">📡 SRI/DAI/DWFS</button>
-      <button class="btn btn-primary" onclick="document.getElementById('bts-dia').scrollIntoView({behavior:'smooth'})">🤖 DIA</button>
-      <button class="btn btn-primary" onclick="document.getElementById('bts-indus').scrollIntoView({behavior:'smooth'})">🏭 Industrielles</button>
-      <button class="btn btn-primary" onclick="document.getElementById('bts-elt').scrollIntoView({behavior:'smooth'})">⚡ ELT/EII/EREE</button>
+    <h2 class="section-title" data-aos="fade-up">📘 Référentiel BTS – Mathématiques</h2>
+    <div class="tab-bar" data-aos="fade-up" data-aos-delay="50">
+      <button class="tab-btn" onclick="document.getElementById('bts-sri').scrollIntoView({behavior:'smooth'})">📡 SRI/DAI/DWFS</button>
+      <button class="tab-btn" onclick="document.getElementById('bts-dia').scrollIntoView({behavior:'smooth'})">🤖 DIA</button>
+      <button class="tab-btn" onclick="document.getElementById('bts-indus').scrollIntoView({behavior:'smooth'})">🏭 Industrielles</button>
+      <button class="tab-btn" onclick="document.getElementById('bts-elt').scrollIntoView({behavior:'smooth'})">⚡ ELT/EII/EREE</button>
     </div>
 
-    <!-- SRI/DAI/DWFS -->
-    <div id="bts-sri" class="card"><h3>SRI, DAI, DWFS – 4h/semaine</h3>
-      <details><summary>📘 Première année (7 chapitres)</summary>
-        <div class="chapter-item"><strong>1. Principes de logique, langage ensembliste et applications</strong><div class="resource-buttons">@@BTN@@</div></div>
-        <div class="chapter-item"><strong>2. Fonctions numériques d’une variable réelle</strong><div class="resource-buttons">@@BTN@@</div></div>
-        <div class="chapter-item"><strong>3. Développements limités</strong><div class="resource-buttons">@@BTN@@</div></div>
-        <div class="chapter-item"><strong>4. Suites numériques</strong><div class="resource-buttons">@@BTN@@</div></div>
-        <div class="chapter-item"><strong>5. Intégrales simples</strong><div class="resource-buttons">@@BTN@@</div></div>
-        <div class="chapter-item"><strong>6. Équations différentielles linéaires</strong><div class="resource-buttons"><a href="cours-equations-differentielles.pdf" class="res-btn res-pdf" target="_blank">📄 Cours PDF</a>
-<a href="#" class="res-btn res-exo" onclick="toast('🔜 Énoncés à venir')">📝 Énoncés</a>
-<a href="#" class="res-btn res-cor" onclick="toast('🔜 Corrigés à venir')">✅ Corrigés</a>
-<a href="#" class="res-btn res-vid" onclick="toast('🔜 Vidéo à venir')">🎥 Vidéos</a></div></div>
-        <div class="chapter-item"><strong>7. Calcul matriciel</strong><div class="resource-buttons">@@BTN@@</div></div>
-      </details>
-      <details><summary>📘 Deuxième année (7 chapitres)</summary>
-        <div class="chapter-item"><strong>1. Intégrales généralisées</strong><div class="resource-buttons">@@BTN@@</div></div>
-        <div class="chapter-item"><strong>2. Séries numériques</strong><div class="resource-buttons">@@BTN@@</div></div>
-        <div class="chapter-item"><strong>3. Espaces vectoriels réels et applications linéaires</strong><div class="resource-buttons">@@BTN@@</div></div>
-        <div class="chapter-item"><strong>4. Diagonalisation</strong><div class="resource-buttons">@@BTN@@</div></div>
-        <div class="chapter-item"><strong>5. Fonctions numériques de deux variables</strong><div class="resource-buttons">@@BTN@@</div></div>
-        <div class="chapter-item"><strong>6. Statistiques descriptives</strong><div class="resource-buttons">@@BTN@@</div></div>
-        <div class="chapter-item"><strong>7. Calcul des probabilités sur un ensemble fini</strong><div class="resource-buttons">@@BTN@@</div></div>
-      </details>
-    </div>
+    <div class="grid" data-aos="fade-up">
+      <div id="bts-sri" class="card"><h3>SRI, DAI, DWFS – 4h/semaine</h3>
+        <details><summary>📘 Première année (7 chapitres)</summary>
+          <div class="chapter-item"><strong>1. Principes de logique, langage ensembliste et applications</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>2. Fonctions numériques d’une variable réelle</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>3. Développements limités</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>4. Suites numériques</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>5. Intégrales simples</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>6. Équations différentielles linéaires</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>7. Calcul matriciel</strong><div class="resource-buttons"></div></div>
+        </details>
+        <details><summary>📘 Deuxième année (7 chapitres)</summary>
+          <div class="chapter-item"><strong>1. Intégrales généralisées</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>2. Séries numériques</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>3. Espaces vectoriels réels et applications linéaires</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>4. Diagonalisation</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>5. Fonctions numériques de deux variables</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>6. Statistiques descriptives</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>7. Calcul des probabilités sur un ensemble fini</strong><div class="resource-buttons"></div></div>
+        </details>
+      </div>
 
-    <!-- DIA -->
-    <div id="bts-dia" class="card"><h3>DIA – 6h/semaine</h3>
-      <details><summary>📘 Première année (8 chapitres)</summary>
-        <div class="chapter-item"><strong>1. Principes de logique, langage ensembliste et applications</strong><div class="resource-buttons">@@BTN@@</div></div>
-        <div class="chapter-item"><strong>2. Fonctions numériques d’une variable réelle</strong><div class="resource-buttons">@@BTN@@</div></div>
-        <div class="chapter-item"><strong>3. Développements limités</strong><div class="resource-buttons">@@BTN@@</div></div>
-        <div class="chapter-item"><strong>4. Suites numériques</strong><div class="resource-buttons">@@BTN@@</div></div>
-        <div class="chapter-item"><strong>5. Intégrales simples</strong><div class="resource-buttons">@@BTN@@</div></div>
-        <div class="chapter-item"><strong>6. Équations différentielles linéaires</strong><div class="resource-buttons"><a href="cours-equations-differentielles.pdf" class="res-btn res-pdf" target="_blank">📄 Cours PDF</a>
-<a href="#" class="res-btn res-exo" onclick="toast('🔜 Énoncés à venir')">📝 Énoncés</a>
-<a href="#" class="res-btn res-cor" onclick="toast('🔜 Corrigés à venir')">✅ Corrigés</a>
-<a href="#" class="res-btn res-vid" onclick="toast('🔜 Vidéo à venir')">🎥 Vidéos</a></div></div>
-        <div class="chapter-item"><strong>7. Calcul matriciel</strong><div class="resource-buttons">@@BTN@@</div></div>
-        <div class="chapter-item"><strong>8. Graphes</strong><div class="resource-buttons">@@BTN@@</div></div>
-      </details>
-      <details><summary>📘 Deuxième année (8 chapitres)</summary>
-        <div class="chapter-item"><strong>1. Intégrales généralisées</strong><div class="resource-buttons">@@BTN@@</div></div>
-        <div class="chapter-item"><strong>2. Séries numériques</strong><div class="resource-buttons">@@BTN@@</div></div>
-        <div class="chapter-item"><strong>3. Espaces vectoriels réels et applications linéaires</strong><div class="resource-buttons">@@BTN@@</div></div>
-        <div class="chapter-item"><strong>4. Diagonalisation</strong><div class="resource-buttons">@@BTN@@</div></div>
-        <div class="chapter-item"><strong>5. Fonctions numériques de deux variables</strong><div class="resource-buttons">@@BTN@@</div></div>
-        <div class="chapter-item"><strong>6. Optimisation sous contraintes (multiplicateurs de Lagrange)</strong><div class="resource-buttons">@@BTN@@</div></div>
-        <div class="chapter-item"><strong>7. Statistiques descriptives</strong><div class="resource-buttons">@@BTN@@</div></div>
-        <div class="chapter-item"><strong>8. Calcul des probabilités sur un ensemble fini</strong><div class="resource-buttons">@@BTN@@</div></div>
-      </details>
-    </div>
+      <div id="bts-dia" class="card"><h3>DIA – 6h/semaine</h3>
+        <details><summary>📘 Première année (8 chapitres)</summary>
+          <div class="chapter-item"><strong>1. Principes de logique, langage ensembliste et applications</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>2. Fonctions numériques d’une variable réelle</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>3. Développements limités</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>4. Suites numériques</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>5. Intégrales simples</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>6. Équations différentielles linéaires</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>7. Calcul matriciel</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>8. Graphes</strong><div class="resource-buttons"></div></div>
+        </details>
+        <details><summary>📘 Deuxième année (8 chapitres)</summary>
+          <div class="chapter-item"><strong>1. Intégrales généralisées</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>2. Séries numériques</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>3. Espaces vectoriels réels et applications linéaires</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>4. Diagonalisation</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>5. Fonctions numériques de deux variables</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>6. Optimisation sous contraintes (Lagrange)</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>7. Statistiques descriptives</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>8. Calcul des probabilités sur un ensemble fini</strong><div class="resource-buttons"></div></div>
+        </details>
+      </div>
 
-    <!-- Industrielles (10 filières) -->
-    <div id="bts-indus" class="card"><h3>Industrielles (MA, MI, ENG, PRO, BAT, MPC, ESA, MO, CPI, PTE) – 4h/sem</h3>
-      <details><summary>📘 Première année (7 chapitres)</summary>
-        <div class="chapter-item"><strong>1. Nombres complexes</strong><div class="resource-buttons">@@BTN@@</div></div>
-        <div class="chapter-item"><strong>2. Fonctions numériques d’une variable réelle</strong><div class="resource-buttons">@@BTN@@</div></div>
-        <div class="chapter-item"><strong>3. Développements limités</strong><div class="resource-buttons">@@BTN@@</div></div>
-        <div class="chapter-item"><strong>4. Intégrales simples</strong><div class="resource-buttons">@@BTN@@</div></div>
-        <div class="chapter-item"><strong>5. Équations différentielles linéaires</strong><div class="resource-buttons"><a href="cours-equations-differentielles.pdf" class="res-btn res-pdf" target="_blank">📄 Cours PDF</a>
-<a href="#" class="res-btn res-exo" onclick="toast('🔜 Énoncés à venir')">📝 Énoncés</a>
-<a href="#" class="res-btn res-cor" onclick="toast('🔜 Corrigés à venir')">✅ Corrigés</a>
-<a href="#" class="res-btn res-vid" onclick="toast('🔜 Vidéo à venir')">🎥 Vidéos</a></div></div>
-        <div class="chapter-item"><strong>6. Séries numériques</strong><div class="resource-buttons">@@BTN@@</div></div>
-        <div class="chapter-item"><strong>7. Calcul matriciel</strong><div class="resource-buttons">@@BTN@@</div></div>
-      </details>
-      <details><summary>📘 Deuxième année (7 chapitres)</summary>
-        <div class="chapter-item"><strong>1. Intégrales généralisées</strong><div class="resource-buttons">@@BTN@@</div></div>
-        <div class="chapter-item"><strong>2. Espaces vectoriels réels et applications linéaires</strong><div class="resource-buttons">@@BTN@@</div></div>
-        <div class="chapter-item"><strong>3. Diagonalisation</strong><div class="resource-buttons">@@BTN@@</div></div>
-        <div class="chapter-item"><strong>4. Fonctions numériques de deux variables (optimisation sans contrainte)</strong><div class="resource-buttons">@@BTN@@</div></div>
-        <div class="chapter-item"><strong>5. Intégrales doubles</strong><div class="resource-buttons">@@BTN@@</div></div>
-        <div class="chapter-item"><strong>6. Statistiques descriptives</strong><div class="resource-buttons">@@BTN@@</div></div>
-        <div class="chapter-item"><strong>7. Calcul des probabilités sur un ensemble fini (loi binomiale, Poisson)</strong><div class="resource-buttons">@@BTN@@</div></div>
-      </details>
-    </div>
+      <div id="bts-indus" class="card"><h3>Industrielles (MA, MI, ENG, PRO, BAT, MPC, ESA, MO, CPI, PTE)</h3>
+        <details><summary>📘 Première année (7 chapitres)</summary>
+          <div class="chapter-item"><strong>1. Nombres complexes</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>2. Fonctions numériques d’une variable réelle</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>3. Développements limités</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>4. Intégrales simples</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>5. Équations différentielles linéaires</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>6. Séries numériques</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>7. Calcul matriciel</strong><div class="resource-buttons"></div></div>
+        </details>
+        <details><summary>📘 Deuxième année (7 chapitres)</summary>
+          <div class="chapter-item"><strong>1. Intégrales généralisées</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>2. Espaces vectoriels réels et applications linéaires</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>3. Diagonalisation</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>4. Fonctions de deux variables (optimisation)</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>5. Intégrales doubles</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>6. Statistiques descriptives</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>7. Calcul des probabilités (binomiale, Poisson)</strong><div class="resource-buttons"></div></div>
+        </details>
+      </div>
 
-    <!-- Électrotechnique -->
-    <div id="bts-elt" class="card"><h3>ELT, EII, EREE – 4h/semaine</h3>
-      <details><summary>📘 Première année (9 chapitres)</summary>
-        <div class="chapter-item"><strong>1. Nombres complexes</strong><div class="resource-buttons">@@BTN@@</div></div>
-        <div class="chapter-item"><strong>2. Fonctions numériques d’une variable réelle</strong><div class="resource-buttons">@@BTN@@</div></div>
-        <div class="chapter-item"><strong>3. Développements limités</strong><div class="resource-buttons">@@BTN@@</div></div>
-        <div class="chapter-item"><strong>4. Intégrales simples</strong><div class="resource-buttons">@@BTN@@</div></div>
-        <div class="chapter-item"><strong>5. Équations différentielles linéaires</strong><div class="resource-buttons"><a href="cours-equations-differentielles.pdf" class="res-btn res-pdf" target="_blank">📄 Cours PDF</a>
-<a href="#" class="res-btn res-exo" onclick="toast('🔜 Énoncés à venir')">📝 Énoncés</a>
-<a href="#" class="res-btn res-cor" onclick="toast('🔜 Corrigés à venir')">✅ Corrigés</a>
-<a href="#" class="res-btn res-vid" onclick="toast('🔜 Vidéo à venir')">🎥 Vidéos</a></div></div>
-        <div class="chapter-item"><strong>6. Intégrales généralisées</strong><div class="resource-buttons">@@BTN@@</div></div>
-        <div class="chapter-item"><strong>7. Transformée de Laplace</strong><div class="resource-buttons">@@BTN@@</div></div>
-        <div class="chapter-item"><strong>8. Séries numériques</strong><div class="resource-buttons">@@BTN@@</div></div>
-        <div class="chapter-item"><strong>9. Transformée en Z</strong><div class="resource-buttons">@@BTN@@</div></div>
-      </details>
-      <details><summary>📘 Deuxième année (7 chapitres)</summary>
-        <div class="chapter-item"><strong>1. Calcul matriciel</strong><div class="resource-buttons">@@BTN@@</div></div>
-        <div class="chapter-item"><strong>2. Espaces vectoriels réels et applications linéaires</strong><div class="resource-buttons">@@BTN@@</div></div>
-        <div class="chapter-item"><strong>3. Diagonalisation</strong><div class="resource-buttons">@@BTN@@</div></div>
-        <div class="chapter-item"><strong>4. Fonctions numériques de deux variables</strong><div class="resource-buttons">@@BTN@@</div></div>
-        <div class="chapter-item"><strong>5. Intégrales doubles</strong><div class="resource-buttons">@@BTN@@</div></div>
-        <div class="chapter-item"><strong>6. Statistiques descriptives</strong><div class="resource-buttons">@@BTN@@</div></div>
-        <div class="chapter-item"><strong>7. Calcul des probabilités sur un ensemble fini</strong><div class="resource-buttons">@@BTN@@</div></div>
-      </details>
+      <div id="bts-elt" class="card"><h3>ELT, EII, EREE – 4h/semaine</h3>
+        <details><summary>📘 Première année (9 chapitres)</summary>
+          <div class="chapter-item"><strong>1. Nombres complexes</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>2. Fonctions numériques d’une variable réelle</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>3. Développements limités</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>4. Intégrales simples</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>5. Équations différentielles linéaires</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>6. Intégrales généralisées</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>7. Transformée de Laplace</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>8. Séries numériques</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>9. Transformée en Z</strong><div class="resource-buttons"></div></div>
+        </details>
+        <details><summary>📘 Deuxième année (7 chapitres)</summary>
+          <div class="chapter-item"><strong>1. Calcul matriciel</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>2. Espaces vectoriels réels et applications linéaires</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>3. Diagonalisation</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>4. Fonctions numériques de deux variables</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>5. Intégrales doubles</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>6. Statistiques descriptives</strong><div class="resource-buttons"></div></div>
+          <div class="chapter-item"><strong>7. Calcul des probabilités sur un ensemble fini</strong><div class="resource-buttons"></div></div>
+        </details>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact">
+<section id="contact" class="section">
   <div class="container">
-    <h2 class="section-title">📞 Contactez le professeur</h2>
+    <h2 class="section-title" data-aos="fade-up">📞 Contactez le professeur</h2>
     <div class="contact-grid">
-      <div>
-        <div class="contact-item"><i class="fab fa-whatsapp"></i> <strong>WhatsApp :</strong> <a href="https://wa.me/212610864319">+212 6 1086 4319</a></div>
-        <div class="contact-item"><i class="fas fa-envelope"></i> <strong>Email :</strong> fadilimostafa@gmail.com</div>
-        <div class="contact-item"><i class="fas fa-clock"></i> Disponible lundi–samedi, 9h–21h</div>
-      </div>
-      <form action="https://formsubmit.co/fadilimostafa@gmail.com" method="POST">
+      <div data-aos="fade-right">
+        <div class="contact-item"><i class="fab fa-whatsapp contact-icon"></i> <strong>WhatsApp :</strong> <a href="https://wa.me/212610864319">+212 6 1086 4319</a></div>
+        <div class="contact-item"><i class="fas fa-envelope contact-icon"></i> <strong>Email :</strong> fadilimostafa@gmail.com</div>
+           </div>
+      <form action="https://formsubmit.co/fadilimostafa@gmail.com" method="POST" data-aos="fade-left">
         <input type="text" name="nom" placeholder="Votre nom" required>
         <input type="tel" name="tel" placeholder="Votre WhatsApp" required>
         <textarea name="message" rows="4" placeholder="Votre message (niveau, besoin)" required></textarea>
-        <button type="submit" class="btn btn-primary">Envoyer</button>
+        <button type="submit" class="btn btn-primary">Envoyer le message</button>
       </form>
     </div>
   </div>
 </section>
 
 <footer>
-  <p>© 2026 Bac Maths Maroc – Mostafa Fadili, professeur agrégé de mathématiques</p>
+  <div class="container">
+    <p>© 2026 Bac Maths Maroc – Mostafa Fadili, professeur agrégé de mathématiques</p>
+  </div>
 </footer>
 
 <div class="toast" id="toast"></div>
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init({ duration: 800, once: true });
-
-  // Menu hamburger
-  const hamburger = document.getElementById('hamburgerBtn');
-  const navLinks = document.getElementById('navLinks');
-  hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
-  document.querySelectorAll('.nav-links a').forEach(link => link.addEventListener('click', () => navLinks.classList.remove('open')));
-
-  // Dark mode
-  const darkToggle = document.getElementById('darkModeToggle');
-  darkToggle.addEventListener('click', () => {
-    document.body.classList.toggle('dark');
-    localStorage.setItem('darkMode', document.body.classList.contains('dark'));
-  });
-  if (localStorage.getItem('darkMode') === 'true') document.body.classList.add('dark');
-
-  // Back to top
-  const backBtn = document.getElementById('backToTop');
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 300) backBtn.classList.add('show');
-    else backBtn.classList.remove('show');
-  });
-  backBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-
-  // Toast
-  window.toast = function(msg) {
-    const t = document.getElementById('toast');
-    t.textContent = msg;
-    t.classList.add('show');
-    setTimeout(() => t.classList.remove('show'), 3000);
-  };
-
-  // Remplacer tous les marqueurs @@BTN@@ par les 4 vrais boutons (avec PDF à venir)
-  function replaceAllButtons() {
-    const btns = `<a href="#" class="res-btn res-pdf" onclick="toast('🔜 PDF à venir')">📄 Cours</a>
-                  <a href="#" class="res-btn res-exo" onclick="toast('🔜 Énoncés à venir')">📝 Énoncés</a>
-                  <a href="#" class="res-btn res-cor" onclick="toast('🔜 Corrigés à venir')">✅ Corrigés</a>
-                  <a href="#" class="res-btn res-vid" onclick="toast('🔜 Vidéo à venir')">🎥 Vidéos</a>`;
-    document.querySelectorAll('.resource-buttons').forEach(el => {
-      if (el.innerHTML.includes('@@BTN@@') || el.innerHTML.trim() === '') {
-        el.innerHTML = btns;
-      }
-    });
-  }
-  replaceAllButtons();
-
-  // Remplacer les cartes des cours rapides
-  const tcCards = `<div class="card"><h3>Fonctions Numériques</h3><div class="resource-buttons"><button class="btn btn-primary" onclick="toast('📥 PDF')">📥 Cours PDF</button> <button class="btn btn-outline" onclick="toast('🎥 Vidéo')">▶ Vidéo</button></div></div>
-                   <div class="card"><h3>Trigonométrie</h3><div class="resource-buttons"><button class="btn btn-primary" onclick="toast('📥 PDF')">📥 Cours PDF</button> <button class="btn btn-outline" onclick="toast('🎥 Vidéo')">▶ Vidéo</button></div></div>
-                   <div class="card"><h3>Statistiques</h3><div class="resource-buttons"><button class="btn btn-primary" onclick="toast('📥 PDF')">📥 Cours PDF</button> <button class="btn btn-outline" onclick="toast('🎥 Vidéo')">▶ Vidéo</button></div></div>`;
-  const otherCards = `<div class="card"><h3>Cours exemple</h3><div class="resource-buttons"><button class="btn btn-primary" onclick="toast('📥 PDF')">📥 Cours PDF</button> <button class="btn btn-outline" onclick="toast('🎥 Vidéo')">▶ Vidéo</button></div></div>`;
-  document.getElementById('panel-tc').innerHTML = `<div class="grid">${tcCards}</div>`;
-  ['panel-1bac', 'panel-2bac', 'panel-sp', 'panel-bts'].forEach(id => {
-    document.getElementById(id).innerHTML = `<div class="grid">${otherCards.repeat(3)}</div>`;
-  });
-
-  // Fonction pour afficher un panneau
-  window.showCoursPanel = function(level) {
-    document.querySelectorAll('.cours-panel').forEach(panel => panel.style.display = 'none');
-    const panel = document.getElementById(`panel-${level}`);
-    if (panel) panel.style.display = 'block';
-  };
-</script>
+<script src="app.js"></script>
 </body>
 </html>
